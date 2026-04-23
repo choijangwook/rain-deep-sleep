@@ -1,4 +1,4 @@
 title: Rain Deep Sleep
 description: Calm rain sounds for sleep and focus
 markdown: kramdown
-permalink: pretty
+permalink: /:title/
