@@ -10,6 +10,3 @@ Yes.
 
 ## Does it help sleep?
 It helps many people relax and fall asleep faster.
-
-## Can I use it offline?
-Yes, if audio is included locally.
