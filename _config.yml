@@ -11,7 +11,7 @@ permalink: /:title:/
 baseurl: "/rain-deep-sleep"
 
 # 🔍 사이트 URL (네 GitHub 아이디로 수정)
-url: "https://YOUR_USERNAME.github.io"
+url: "https://choijangwook.github.io"
 
 # 포스트 기본 설정
 defaults:
