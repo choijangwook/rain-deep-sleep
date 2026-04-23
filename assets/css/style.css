@@ -6,11 +6,8 @@ body {
     text-align: center;
 }
 
-/* 🌧️ 비 배경 */
 .rain-bg {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: url("https://i.imgur.com/8QfQf2y.gif");
@@ -18,60 +15,54 @@ body {
     pointer-events: none;
 }
 
-/* 헤더 */
 header {
     padding: 20px;
 }
 
-/* 네비 */
-nav a {
+.nav a {
     margin: 0 10px;
     color: #8ab4f8;
     text-decoration: none;
+}
+
+/* 홈 버튼 */
+.home-btn {
+    background: rgba(255,255,255,0.1);
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.home-btn:hover {
+    background: rgba(255,255,255,0.2);
 }
 
 /* 플레이어 */
 .player-box {
     margin: 30px auto;
     padding: 20px;
+    width: 300px;
     background: rgba(255,255,255,0.05);
     border-radius: 12px;
-    width: 300px;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 10px;
     margin: 5px;
+    background: #1f6feb;
     border: none;
     border-radius: 8px;
-    background: #1f6feb;
     color: white;
-    cursor: pointer;
 }
 
-button:hover {
-    background: #388bfd;
-}
-
-input[type="range"] {
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* 콘텐츠 */
-main {
-    padding: 20px;
+.youtube-box {
     max-width: 800px;
-    margin: auto;
+    margin: 30px auto;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-/* 광고 영역 */
 .ad-slot {
     margin: 40px auto;
     height: 90px;
     background: rgba(255,255,255,0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.5;
 }
