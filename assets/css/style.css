@@ -1,3 +1,4 @@
+/* 기본 설정 */
 body {
     margin: 0;
     font-family: 'Noto Sans', Arial, sans-serif;
@@ -11,24 +12,36 @@ header {
     padding: 20px;
 }
 
-/* 네비 */
+/* 제목 */
+h1 a {
+    text-decoration: none;
+    color: #e6f1ff;
+}
+
+/* 네비게이션 */
+nav {
+    margin-top: 10px;
+}
+
 nav a {
     margin: 0 10px;
     color: #8ab4f8;
     text-decoration: none;
+    font-size: 15px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* 메인 */
+/* 메인 영역 */
 main {
     max-width: 1000px;
     margin: auto;
+    padding: 10px;
 }
 
-/* 🎬 카드 UI */
+/* 🎬 영상 카드 그리드 */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -36,6 +49,7 @@ main {
     padding: 20px;
 }
 
+/* 카드 */
 .video-card {
     text-decoration: none;
     color: white;
@@ -49,21 +63,35 @@ main {
     transform: translateY(-5px);
 }
 
+/* 썸네일 */
 .video-card img {
     width: 100%;
+    display: block;
 }
 
+/* 제목 */
 .video-title {
     padding: 10px;
     font-size: 14px;
 }
 
-/* 광고 영역 */
-.adsense {
-    margin: 40px auto;
-    padding: 20px;
-    max-width: 800px;
-    background: rgba(255,255,255,0.05);
+/* 🔥 유튜브 반응형 */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* 버튼 */
@@ -74,34 +102,36 @@ button {
     border: none;
     border-radius: 8px;
     color: white;
+    cursor: pointer;
 }
 
 button:active {
     transform: scale(0.92);
 }
 
+/* 광고 영역 */
+.adsense {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: rgba(255,255,255,0.05);
+}
+
+/* 링크 */
+a {
+    color: #8ab4f8;
+}
+
 /* 반응형 */
 @media (max-width: 600px) {
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
     .video-title {
         font-size: 13px;
     }
+
 }
-
-
-/* 🔥 유튜브 반응형 핵심 */
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
