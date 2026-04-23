@@ -1,14 +1,9 @@
-# Rain Deep Sleep (Jekyll)
+# Rain Deep Sleep
 
-Static blog + rain ambience site built for GitHub Pages.
+Rain ambience site with blog + YouTube integration.
 
 ## Features
-- Jekyll blog system
-- Markdown posts
 - Rain audio player
-- SEO friendly structure
-
-## How to use
-1. Push to GitHub
-2. Enable Pages
-3. Done
+- YouTube embed
+- Markdown blog
+- Jekyll based
