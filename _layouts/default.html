@@ -6,20 +6,27 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- 폰트 -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
 </head>
 
 <body>
 
 <header>
-  <h1><a href="/">Rain Deep Sleep</a></h1>
+  <h1>
+    <a href="{{ '/' | relative_url }}">Rain Deep Sleep</a>
+  </h1>
 
+  <!-- 🔥 nav (404 해결 핵심) -->
   <nav>
-    <a href="/">⬅ Home</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/about.html">About</a>
-    <a href="/faq.html">FAQ</a>
+    <a href="{{ '/' | relative_url }}">⬅ Home</a>
+    <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+    <a href="{{ '/about.html' | relative_url }}">About</a>
+    <a href="{{ '/faq.html' | relative_url }}">FAQ</a>
   </nav>
 </header>
 
@@ -31,7 +38,8 @@
   <p>© Rain Deep Sleep</p>
 </footer>
 
-<script src="/assets/js/main.js"></script>
+<!-- JS -->
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
 </body>
 </html>
