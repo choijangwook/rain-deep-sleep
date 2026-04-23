@@ -6,8 +6,7 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
-<!-- 🎬 영상 -->
-<div class="youtube-box">
+<div>
 <iframe width="100%" height="315"
 src="https://www.youtube.com/embed/{{ page.video }}"
 frameborder="0"
@@ -15,16 +14,16 @@ allowfullscreen>
 </iframe>
 </div>
 
-<!-- 🔥 위 설명 -->
-<div class="video-intro">
-{{ content | split: '---' | first }}
+<!-- 영상 위 설명 -->
+<div>
+  {{ page.intro }}
 </div>
 
 <hr>
 
-<!-- 🔥 아래 설명 -->
-<div class="video-desc">
-{{ content | split: '---' | last }}
+<!-- 영상 아래 설명 -->
+<div>
+  {{ page.desc }}
 </div>
 
 </article>
