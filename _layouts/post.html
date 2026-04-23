@@ -6,23 +6,36 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
-<!-- 🔥 반응형 유튜브 (핵심) -->
+<!-- 🔥 반응형 유튜브 (모바일 안정) -->
 <div class="video-container">
   <iframe
-    src="https://www.youtube.com/embed/{{ page.video }}?playsinline=1&rel=0&modestbranding=1"
+    src="https://www.youtube-nocookie.com/embed/{{ page.video }}?playsinline=1&rel=0&modestbranding=1"
     title="YouTube video"
     frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen>
   </iframe>
 </div>
 
+<!-- 🔥 모바일 재생 안될 경우 대비 버튼 -->
+<p style="margin-top:15px;">
+  <a href="https://www.youtube.com/watch?v={{ page.video }}" target="_blank">
+    ▶ Watch on YouTube
+  </a>
+</p>
+
 <br>
 
-<div>{{ page.intro }}</div>
+<!-- 영상 위 설명 -->
+<div>
+  {{ page.intro }}
+</div>
 
 <hr>
 
-<div>{{ page.desc }}</div>
+<!-- 영상 아래 설명 -->
+<div>
+  {{ page.desc }}
+</div>
 
 </article>
