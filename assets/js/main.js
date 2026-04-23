@@ -1,31 +1,13 @@
 const audio = document.getElementById("rainAudio");
 
-function playRain() {
-    audio.volume = 0;
+function playRain(btn) {
     audio.play();
-
-    let v = 0;
-    let fade = setInterval(() => {
-        if (v < 1) {
-            v += 0.05;
-            audio.volume = v;
-        } else {
-            clearInterval(fade);
-        }
-    }, 100);
+    btn.innerText = "▶ Playing...";
 }
 
-function pauseRain() {
-    let v = audio.volume;
-    let fade = setInterval(() => {
-        if (v > 0) {
-            v -= 0.05;
-            audio.volume = v;
-        } else {
-            audio.pause();
-            clearInterval(fade);
-        }
-    }, 100);
+function pauseRain(btn) {
+    audio.pause();
+    btn.innerText = "⏸ Paused";
 }
 
 function setVolume(val) {
