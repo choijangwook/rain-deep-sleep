@@ -1,0 +1,13 @@
+---
+layout: default
+title: About
+---
+
+# About
+
+Rain Deep Sleep helps you relax and sleep using natural rain ambience.
+
+This project is designed for:
+- Sleep improvement
+- Focus enhancement
+- Stress reduction
