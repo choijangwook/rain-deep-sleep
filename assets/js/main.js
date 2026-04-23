@@ -1,13 +1,18 @@
 const audio = document.getElementById("rainAudio");
 
-function playRain(btn) {
+const playBtn = document.getElementById("playBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+
+function playRain() {
     audio.play();
-    btn.innerText = "▶ Playing...";
+    playBtn.innerText = "▶ Playing...";
+    pauseBtn.innerText = "⏸ Pause";
 }
 
-function pauseRain(btn) {
+function pauseRain() {
     audio.pause();
-    btn.innerText = "⏸ Paused";
+    pauseBtn.innerText = "⏸ Paused";
+    playBtn.innerText = "▶ Play";
 }
 
 function setVolume(val) {
