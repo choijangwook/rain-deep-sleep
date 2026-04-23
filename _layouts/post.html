@@ -6,22 +6,25 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
-<div>
+<div style="max-width:800px;margin:auto;">
 <iframe width="100%" height="315"
-src="https://www.youtube.com/embed/{{ page.video }}"
+src="https://www.youtube.com/embed/{{ page.video }}?rel=0"
+title="YouTube video"
 frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+referrerpolicy="strict-origin-when-cross-origin"
 allowfullscreen>
 </iframe>
 </div>
 
-<!-- 영상 위 설명 -->
+<br>
+
 <div>
   {{ page.intro }}
 </div>
 
 <hr>
 
-<!-- 영상 아래 설명 -->
 <div>
   {{ page.desc }}
 </div>
