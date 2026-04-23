@@ -9,8 +9,8 @@ Calm rain ambience for sleep, focus, and relaxation.
 
 <div class="player-box">
 
-<button onclick="playRain()">▶ Play</button>
-<button onclick="pauseRain()">⏸ Pause</button>
+<button onclick="playRain(this)">▶ Play</button>
+<button onclick="pauseRain(this)">⏸ Pause</button>
 
 <input type="range" min="0" max="1" step="0.01" onchange="setVolume(this.value)">
 
@@ -22,21 +22,7 @@ Calm rain ambience for sleep, focus, and relaxation.
 
 ---
 
-## 🎬 Relaxing Rain Video
-
-<div class="youtube-box">
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-frameborder="0"
-allowfullscreen>
-</iframe>
-
-</div>
-
----
-
-## Latest Posts
+## 🎬 Latest Videos
 
 {% for post in site.posts %}
 - [{{ post.title }}]({{ post.url }})
