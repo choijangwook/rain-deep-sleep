@@ -1,1 +1,23 @@
+title: Rain Deep Sleep
+description: Calm rain sounds for sleep, focus, and relaxation
+
+# Markdown 엔진
+markdown: kramdown
+
+# 🔥 Post URL 구조 (404 방지)
+permalink: /:title:/
+
+# 🔥 GitHub Pages 프로젝트 주소 (매우 중요)
 baseurl: "/rain-deep-sleep"
+
+# 사이트 기본 URL (SEO용, 네 계정으로 변경 권장)
+url: "https://YOUR_USERNAME.github.io"
+
+# 포스트 기본 설정
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
