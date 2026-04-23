@@ -4,7 +4,6 @@ function playRain() {
     audio.volume = 0;
     audio.play();
 
-    // 🌿 fade in
     let v = 0;
     let fade = setInterval(() => {
         if (v < 1) {
@@ -17,7 +16,6 @@ function playRain() {
 }
 
 function pauseRain() {
-    // 🌿 fade out
     let v = audio.volume;
     let fade = setInterval(() => {
         if (v > 0) {
