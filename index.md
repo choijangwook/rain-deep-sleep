@@ -5,12 +5,12 @@ title: Home
 
 # Rain Deep Sleep 🌧️
 
-Calm rain ambience for sleep, focus, and relaxation.
+<div>
 
-<div class="player-box">
+<button id="playBtn" onclick="playRain()">▶ Play</button>
+<button id="pauseBtn" onclick="pauseRain()">⏸ Pause</button>
 
-<button onclick="playRain(this)">▶ Play</button>
-<button onclick="pauseRain(this)">⏸ Pause</button>
+<br><br>
 
 <input type="range" min="0" max="1" step="0.01" onchange="setVolume(this.value)">
 
