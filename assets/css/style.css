@@ -1,11 +1,12 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans', Arial, sans-serif;
     background: #0a0f1a;
     color: #e6f1ff;
     text-align: center;
 }
 
+/* 비 배경 */
 .rain-bg {
     position: fixed;
     width: 100%;
@@ -15,25 +16,17 @@ body {
     pointer-events: none;
 }
 
-header {
-    padding: 20px;
-}
-
+/* nav */
 .nav a {
     margin: 0 10px;
     color: #8ab4f8;
     text-decoration: none;
 }
 
-/* 홈 버튼 */
 .home-btn {
     background: rgba(255,255,255,0.1);
     padding: 6px 10px;
     border-radius: 8px;
-}
-
-.home-btn:hover {
-    background: rgba(255,255,255,0.2);
 }
 
 /* 플레이어 */
@@ -54,11 +47,15 @@ button {
     color: white;
 }
 
+/* 🔥 버튼 클릭 느낌 */
+button:active {
+    transform: scale(0.95);
+    background: #0d4fc2;
+}
+
 .youtube-box {
     max-width: 800px;
     margin: 30px auto;
-    border-radius: 12px;
-    overflow: hidden;
 }
 
 .ad-slot {
