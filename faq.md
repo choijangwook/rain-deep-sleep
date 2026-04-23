@@ -1,6 +1,7 @@
 ---
 layout: default
 title: FAQ
+permalink: /faq.html
 ---
 
 # FAQ
@@ -9,4 +10,4 @@ title: FAQ
 Yes.
 
 ## Does it help sleep?
-It helps many people relax and fall asleep faster.
+Yes, rain sounds help relaxation and sleep.
