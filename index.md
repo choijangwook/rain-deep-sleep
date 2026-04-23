@@ -22,6 +22,20 @@ Calm rain ambience for sleep, focus, and relaxation.
 
 ---
 
+## 🎬 Relaxing Rain Video
+
+<div class="youtube-box">
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+---
+
 ## Latest Posts
 
 {% for post in site.posts %}
