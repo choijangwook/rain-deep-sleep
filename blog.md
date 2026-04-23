@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Blog
+permalink: /blog/
 ---
 
-<h1>🎬 All Videos</h1>
+# 🎬 All Videos
 
 <div class="video-grid">
 
