@@ -1,34 +1,38 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
-/* 전체 폭 꽉 차게 */
-.container {
-  width: 100%;
-  max-width: 100%;
+/* 카드 레이아웃 */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
-  box-sizing: border-box;
 }
 
-/* 네비게이션 */
+.card {
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* nav */
 nav {
   background: #111;
-  padding: 15px 20px;
+  padding: 15px;
 }
 
 nav a {
   color: white;
   margin-right: 15px;
   text-decoration: none;
-  font-weight: bold;
-}
-
-/* 본문 */
-main {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
 }
