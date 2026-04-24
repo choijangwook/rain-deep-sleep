@@ -3,27 +3,13 @@ layout: default
 title: Rain Deep Sleep
 ---
 
-# Rain Deep Sleep 🌧️
+<h1 class="main-title">
+8시간 연속재생, 10분후 화면 꺼짐 8H Play, Screen Off in 10 Min
+</h1>
 
-<!-- 광고 영역 -->
+<!-- 광고 -->
 <div class="ad-box">
-
-<!-- Google AdSense 코드 넣는 곳 -->
-<script async 
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
-crossorigin="anonymous"></script>
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-XXXXXXXXXXXX"
-     data-ad-slot="1234567890"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+  <!-- 애드센스 코드 넣는 자리 -->
 </div>
 
 ## Latest Posts
@@ -33,14 +19,16 @@ crossorigin="anonymous"></script>
 {% for post in site.posts limit:6 %}
   <div class="card">
 
-    <a href="https://www.youtube.com/watch?v={{ post.youtube_id }}" target="_blank">
+    <!-- 썸네일 → 유튜브 이동 -->
+    <a href="https://www.youtube.com/watch?v={{ post.youtube_id }}">
       <div class="thumb">
         <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/0.jpg">
         <div class="play-button"></div>
       </div>
     </a>
 
-    <h3>
+    <!-- 제목 → 상세페이지 -->
+    <h3 class="card-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
       </a>
