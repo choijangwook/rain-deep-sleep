@@ -1,12 +1,33 @@
 ---
-title: Relaxing Rain Sound
+layout: post
+title: 8H Play [Screen Off in 10 Min]
+video: qstgnUFHMHA
 ---
 
-# Relaxing Rain Sound
 
-Calming rain ambience for stress relief and meditation.
+## 🌧️숲속 텐트에 내리는 빗소리 Rain in Forest Tent
 
-Best for:
-- Stress relief
-- Meditation
-- Relaxation
+깊은 산속의 텐트에서 듣는 빗소리
+
+## 🎬 Watch Video
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/qstgnUFHMHA"
+    allowfullscreen>
+  </iframe>
+</div>
+
+## ▶ Watch on YouTube
+
+<a class="watch-youtube"
+   href="https://www.youtube.com/watch?v=qstgnUFHMHA"
+   target="_blank">
+  ▶ Watch on YouTube
+</a>
+
+---
+
+## 💤 Benefits
+
+- 잠들기 전 수면 유도, 불면증 완화, 공부 및 집중 환경, 스트레스 해소, 깊은 잠, 편안한 휴식.
+- Helping asleep, Making a quiet place to study, Helping calm and less worried, Sleeping deeply, Taking a good rest.
