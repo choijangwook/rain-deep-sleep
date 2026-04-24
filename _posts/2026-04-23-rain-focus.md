@@ -3,7 +3,7 @@
 ---
 layout: post
 title: Rain Sound for Focus
-video: qstgnUFHMHA
+video: DIv_U8pbWIA
 ---
 
 
@@ -14,7 +14,7 @@ video: qstgnUFHMHA
 ## 🎬 Watch Video
 
 <div class="video-container">
-  <iframe src="https://www.youtube.com/embed/qstgnUFHMHA"
+  <iframe src="https://www.youtube.com/embed/DIv_U8pbWIA"
     allowfullscreen>
   </iframe>
 </div>
@@ -22,7 +22,7 @@ video: qstgnUFHMHA
 ## ▶ Watch on YouTube
 
 <a class="watch-youtube"
-   href="https://www.youtube.com/watch?v=qstgnUFHMHA"
+   href="https://www.youtube.com/watch?v=DIv_U8pbWIA"
    target="_blank">
   ▶ Watch on YouTube
 </a>
