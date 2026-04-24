@@ -11,15 +11,13 @@ youtube_id: qstgnUFHMHA
 
 ---
 
-Relax inside a cozy wooden house while gentle rain falls outside.
-
-This sound is perfect for:
-
-- Deep sleep  
-- Focus and studying  
-- Stress relief  
-- Relaxation  
-
 ---
 
-Enjoy the calm and peaceful rain ambience.
+<br>
+Rain sounds for your deep and comfy sleep.<br>
+In the quiet night, natural rain sounds help you relax and fall asleep fast.<br>
+If you watch and listen for 10 minutes, you will feel very peaceful.<br>
+After 10 minutes, the screen will turn black.<br>
+This video is made for your sleep, focus, meditation, and rest.<br>
+
+---
