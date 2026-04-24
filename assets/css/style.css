@@ -88,3 +88,14 @@ body {
     width: 100%;
   }
 }
+
+.youtube-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
