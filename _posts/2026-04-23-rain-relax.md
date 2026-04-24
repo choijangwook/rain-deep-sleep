@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 8H Play [Screen Off in 10 Min]
-video: qstgnUFHMHA
+video: AJKHpyIlKF4
 ---
 
 
@@ -12,7 +12,7 @@ video: qstgnUFHMHA
 ## 🎬 Watch Video
 
 <div class="video-container">
-  <iframe src="https://www.youtube.com/embed/qstgnUFHMHA"
+  <iframe src="https://www.youtube.com/embed/AJKHpyIlKF4"
     allowfullscreen>
   </iframe>
 </div>
@@ -20,7 +20,7 @@ video: qstgnUFHMHA
 ## ▶ Watch on YouTube
 
 <a class="watch-youtube"
-   href="https://www.youtube.com/watch?v=qstgnUFHMHA"
+   href="https://www.youtube.com/watch?v=AJKHpyIlKF4"
    target="_blank">
   ▶ Watch on YouTube
 </a>
