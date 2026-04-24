@@ -1,3 +1,19 @@
 title: Rain Deep Sleep
-description: Rain sounds for sleep and relaxation
+description: Rain sounds for sleep, focus and relaxation
 theme: minima
+
+baseurl: "/rain-deep-sleep"
+url: "https://choijangwook.github.io"
+
+markdown: kramdown
+
+permalink: /:year/:month/:day/:title.html
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+plugins: []
