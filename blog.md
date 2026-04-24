@@ -1,18 +1,12 @@
 ---
-layout: default
 title: Blog
-permalink: /blog/
 ---
 
-# 🎬 All Videos
+# Blog
 
-<div class="video-grid">
+Welcome to the Rain Deep Sleep blog.
 
-{% for post in site.posts %}
-  <a href="{{ post.url | relative_url }}" class="video-card">
-    <img src="https://img.youtube.com/vi/{{ post.video }}/hqdefault.jpg">
-    <div class="video-title">{{ post.title }}</div>
-  </a>
-{% endfor %}
-
-</div>
+Here you will find posts about:
+- Sleep improvement
+- Focus techniques
+- Relaxation soundscapes
