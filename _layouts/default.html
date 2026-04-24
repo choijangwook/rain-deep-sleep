@@ -2,44 +2,37 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-
-  <!-- 🔥 모바일 화면 꽉 차게 (핵심) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>{{ page.title | default: site.title }}</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
 </head>
 
 <body>
 
   <!-- 헤더 -->
   <header>
-    <h1>
-      <a href="{{ '/' | relative_url }}">
-        {{ site.title | default: "Rain Deep Sleep" }}
-      </a>
+
+    <!-- 🔥 수정된 타이틀 (한 줄 + 긴 제목 대응) -->
+    <h1 class="site-title">
+      깊은 숙면을 위한 빗소리 Rain sound for Deep Sleep
     </h1>
 
+    <!-- 네비게이션 -->
     <nav>
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/blog' | relative_url }}">Blog</a>
       <a href="{{ '/about' | relative_url }}">About</a>
       <a href="{{ '/faq' | relative_url }}">FAQ</a>
     </nav>
+
   </header>
 
   <!-- 본문 -->
   <main>
     {{ content }}
   </main>
-
-  <!-- 푸터 -->
-  <footer style="margin-top:40px; font-size:12px; opacity:0.6;">
-    © {{ site.title | default: "Rain Deep Sleep" }}
-  </footer>
 
 </body>
 </html>
