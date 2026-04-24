@@ -1,18 +1,17 @@
 ---
 layout: default
 title: Blog
-permalink: /blog/
 ---
 
-# 🎬 All Videos
+# Blog
 
-<div class="video-grid">
+Latest posts:
 
-{% for post in site.posts %}
-  <a href="{{ post.url | relative_url }}" class="video-card">
-    <img src="https://img.youtube.com/vi/{{ post.video }}/hqdefault.jpg">
-    <div class="video-title">{{ post.title }}</div>
-  </a>
-{% endfor %}
-
-</div>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      ({{ post.date | date: "%Y-%m-%d" }})
+    </li>
+  {% endfor %}
+</ul>
