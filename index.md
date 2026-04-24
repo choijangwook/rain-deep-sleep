@@ -5,7 +5,7 @@ title: Home
 
 ## 🌧️ Rain Deep Sleep
 
-💤깊은 숙면의 시간 🎶밤새듣는 잔잔한 🌧️빗소리 [10분후 화면꺼짐] 8 Hours Rain Sounds for Deep Sleep #빗소리 #백색소음 #ASMR #雨の音 Calm rain ambience for sleep, focus, and relaxation.
+[10분후 화면만 꺼집니다] 🌙밤새듣는 🌧️빗소리 | 💤깊은 숙면의 시간 | 빗소리 8시간 연속재생 | 8 Hours Rain Sounds for Deep Sleep | 백색소음 | ASMR | 雨の音 | Calm rain ambience for sleep | focus and relaxation | 저절로 잠이 들어요 | WhiteNoise |
 
 ---
 
