@@ -19,26 +19,23 @@ main {
 }
 
 /* =========================
-   헤더 (심플)
+   헤더
 ========================= */
 header {
-    padding: 14px 0;
+    padding: 12px 0;
 }
 
 h1 {
     font-size: 20px;
-    margin: 8px 0;
     color: #ffffff;
-    letter-spacing: 0.5px;
 }
 
 /* =========================
-   네비게이션 (프로 느낌)
+   네비게이션
 ========================= */
 nav {
     display: flex;
     width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 nav a {
@@ -47,27 +44,24 @@ nav a {
     padding: 12px 0;
     color: #f5f5f5;
     text-decoration: none;
-    font-size: 14px;
-    transition: 0.2s;
 }
 
 nav a:hover {
-    color: #ffd400; /* 🔥 강조색만 사용 */
+    color: #ffd400;
 }
 
 /* =========================
-   영상 컨테이너 (넷플릭스 스타일 안정화)
+   영상
 ========================= */
 .video-container {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
     height: 0;
-    margin: 16px 0;
+    margin: 14px 0;
     overflow: hidden;
     border-radius: 12px;
     background: #000;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
 .video-container iframe {
@@ -80,20 +74,18 @@ nav a:hover {
 }
 
 /* =========================
-   CTA 버튼 (유튜브 느낌 → 프로 스타일)
+   버튼 (유튜브 느낌)
 ========================= */
 .yt-button {
     display: inline-block;
     background: #ffd400;
     color: #111;
-    padding: 14px 24px;
+    padding: 14px 22px;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 15px;
     text-decoration: none;
-    margin-top: 14px;
-    transition: all 0.2s ease;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    margin-top: 12px;
+    transition: 0.2s;
 }
 
 .yt-button:hover {
@@ -101,33 +93,47 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-.yt-button:active {
-    transform: scale(0.96);
-}
-
 /* =========================
-   설명 텍스트 (UX 정리)
+   🔥 유튜브 홈 카드 UI
 ========================= */
-p, li {
-    color: #d6d6d6;
-    line-height: 1.6;
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.video-card {
+    text-decoration: none;
+    color: #f5f5f5;
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.2s;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+}
+
+.video-card img {
+    width: 100%;
+    display: block;
+}
+
+.video-title {
+    padding: 10px;
+    font-size: 13px;
 }
 
 /* =========================
-   모바일 최적화
+   모바일
 ========================= */
 @media (max-width: 600px) {
 
-    main {
-        padding: 10px;
-    }
-
     h1 {
-        font-size: 17px;
-    }
-
-    nav a {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .yt-button {
