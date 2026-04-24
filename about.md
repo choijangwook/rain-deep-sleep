@@ -1,12 +1,11 @@
 ---
-title: About
+title: About Rain Deep Sleep
 ---
 
-# About Rain Deep Sleep
+# About
 
-This site provides relaxing rain sounds for sleep, focus, and meditation.
+This site provides calming rain sounds for:
 
-We aim to help people:
-- Sleep better
-- Reduce stress
-- Improve focus
+- Deep sleep
+- Focus and study
+- Relaxation and meditation
