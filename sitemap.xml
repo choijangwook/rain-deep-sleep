@@ -3,9 +3,14 @@
 
   <url>
     <loc>https://choijangwook.github.io/rain-deep-sleep/</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://choijangwook.github.io/rain-deep-sleep/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://choijangwook.github.io/rain-deep-sleep/posts/post1.html</loc>
   </url>
 
 </urlset>
