@@ -1,27 +1,14 @@
 title: Rain Deep Sleep
-description: Calm rain sounds for sleep, focus, and relaxation
+description: Calm rain ambience for sleep, focus, and relaxation.
 
-# Markdown
-markdown: kramdown
-
-# 🔥 Post URL (404 방지 핵심)
-permalink: /:title:/
-
-# 🔥 GitHub Pages 프로젝트 경로 (중요)
 baseurl: "/rain-deep-sleep"
-
-# 🔍 사이트 URL (네 GitHub 아이디로 수정)
 url: "https://choijangwook.github.io"
 
-# 포스트 기본 설정
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+permalink: /:year-:month-:day-:title/
 
-# 플러그인 (GitHub Pages 기본 지원)
+markdown: kramdown
+
+theme: minima
+
 plugins:
   - jekyll-feed
