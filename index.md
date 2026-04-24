@@ -9,7 +9,7 @@ title: Home
 
 ---
 
-## 🎬 Recommended Videos
+## 🎬 최신 동영상 Recommended Videos
 
 <div class="video-grid">
 
