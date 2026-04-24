@@ -3,11 +3,11 @@ body {
     margin: 0;
     font-family: 'Noto Sans', Arial, sans-serif;
     background: #0a0f1a;
-    color: #e6f1ff;
+    color: #ffffff; /* 🔥 전체 글자 흰색 */
     text-align: center;
 }
 
-/* 🔥 전체 폭 문제 해결 */
+/* 전체 레이아웃 */
 main {
     width: 100%;
     max-width: 100%;
@@ -25,10 +25,11 @@ header {
 h1 {
     font-size: 18px;
     margin: 10px 0;
+    color: #ffffff;
 }
 
 /* =========================
-   3) NAV 버튼 좌우 꽉 차게
+   메뉴 (꽉차게 + 흰색)
 ========================= */
 nav {
     display: flex;
@@ -36,20 +37,20 @@ nav {
 }
 
 nav a {
-    flex: 1;              /* 🔥 균등 분배 */
+    flex: 1;
     text-align: center;
     padding: 10px 0;
-    color: #8ab4f8;
+    color: #ffffff;   /* 🔥 흰색 */
     text-decoration: none;
     font-size: 14px;
 }
 
 nav a:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.08);
 }
 
 /* =========================
-   영상 영역
+   유튜브 영역
 ========================= */
 .video-container {
     position: relative;
@@ -66,31 +67,50 @@ nav a:hover {
 }
 
 /* =========================
-   2) Watch on YouTube 색 변경
+   🔥 유튜브 오류 메시지 중앙 정렬 (핵심)
+========================= */
+.video-container,
+iframe {
+    text-align: center;
+}
+
+.video-container p,
+.video-container div,
+iframe + * {
+    text-align: center !important;
+    color: #ffffff !important;
+    margin: 10px auto;
+}
+
+/* JavaScript 경고 문구 강제 중앙 */
+.ytp-error,
+.ytp-error-content,
+.ytp-error-content-wrap {
+    text-align: center !important;
+    color: #ffffff !important;
+}
+
+/* =========================
+   Watch on YouTube 버튼
 ========================= */
 .watch-youtube {
-    color: #ffffff;   /* 🔥 흰색 */
+    color: #ffffff;
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
 }
 
-/* 버튼 느낌 (선택) */
-.watch-youtube:active {
-    transform: scale(0.95);
-}
-
 /* =========================
-   1) 유튜브 오류 메시지 중앙 정렬
-========================= */
-.video-error {
-    width: 100%;
-    text-align: center;     /* 🔥 가운데 */
-    margin: 20px auto;
-    padding: 20px;
-    color: #ff6666;
-    font-size: 14px;
+   버튼 */
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    background: #1f6feb;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* 모바일 */
@@ -103,4 +123,5 @@ nav a:hover {
     nav a {
         font-size: 13px;
     }
+
 }
