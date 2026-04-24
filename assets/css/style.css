@@ -32,7 +32,7 @@ h1 {
 }
 
 /* =========================
-   메뉴 (꽉 차게)
+   메뉴 (흰색 유지)
 ========================= */
 nav {
     display: flex;
@@ -53,7 +53,7 @@ nav a:hover {
 }
 
 /* =========================
-   영상 컨테이너 (핵심 안정화)
+   영상
 ========================= */
 .video-container {
     position: relative;
@@ -61,21 +61,21 @@ nav a:hover {
     padding-bottom: 56.25%;
     height: 0;
     margin: 10px auto;
-    overflow: hidden;   /* 🔥 깨짐 방지 핵심 */
+    overflow: hidden;
     background: #000;
 }
 
 .video-container iframe {
     position: absolute;
     top: 0;
-    left: 0;            /* 🔥 좌측 기준 고정 */
+    left: 0;
     width: 100%;
     height: 100%;
     border: 0;
 }
 
 /* =========================
-   Watch on YouTube 링크
+   Watch on YouTube
 ========================= */
 .watch-youtube {
     color: #ffffff;
@@ -86,12 +86,12 @@ nav a:hover {
 }
 
 /* =========================
-   🔥 유튜브 느낌 버튼 (CTA)
+   🔥 유튜브 느낌 버튼 (색상 변경 완료)
 ========================= */
 .yt-button {
     display: inline-block;
-    background: #ff0000;
-    color: #ffffff;
+    background: #ffd400;   /* 🔥 노란 추천색 */
+    color: #111111;        /* 검정 텍스트 */
     padding: 14px 22px;
     border-radius: 10px;
     font-weight: bold;
@@ -104,7 +104,7 @@ nav a:hover {
 
 /* hover */
 .yt-button:hover {
-    background: #ff1a1a;
+    background: #ffe14a;
     transform: translateY(-2px);
 }
 
@@ -114,7 +114,7 @@ nav a:hover {
 }
 
 /* =========================
-   모바일 최적화
+   모바일
 ========================= */
 @media (max-width: 600px) {
 
