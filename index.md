@@ -9,10 +9,16 @@ Calming rain sounds for sleep, focus, and relaxation.
 
 ## Menu
 
-- About
-- Blog
-- FAQ
+- [About]({{ site.baseurl }}/about.html)
+- [Blog]({{ site.baseurl }}/blog.html)
+- [FAQ]({{ site.baseurl }}/faq.html)
 
 ## Latest Post
 
-- Deep Sleep Rain Sound
+<ul>
+  {% for post in site.posts limit:1 %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
