@@ -10,7 +10,12 @@ title: Blog
 {% for post in site.posts %}
   <div class="card">
     <a href="{{ site.baseurl }}{{ post.url }}">
-      <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/0.jpg">
+      
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/0.jpg">
+        <div class="play-button"></div>
+      </div>
+
       <h3>{{ post.title }}</h3>
     </a>
   </div>
