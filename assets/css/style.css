@@ -142,3 +142,20 @@ nav a:hover {
         font-size: 14px;
     }
 }
+
+.site-title {
+    font-size: 18px;
+    white-space: nowrap;   /* 한 줄 유지 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+    .site-title {
+        font-size: 14px;
+    }
+}
