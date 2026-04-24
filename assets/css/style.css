@@ -24,7 +24,7 @@ body {
 
 .nav-inner {
   display: flex;
-  justify-content: space-between;  /* 🔥 좌우 꽉 */
+  justify-content: space-between;  /* PC 좌우 꽉 */
   align-items: center;
   padding: 15px 20px;
 }
@@ -96,7 +96,7 @@ ul {
   padding-left: 0;
 }
 
-/* 🔥 버튼 크게 */
+/* ▶ 버튼 (PC) */
 .youtube-button {
   display: inline-block;
   margin-top: 20px;
@@ -109,8 +109,9 @@ ul {
   font-weight: bold;
 }
 
-/* 모바일 */
+/* 🔥 모바일 최종 강제 적용 */
 @media (max-width: 768px) {
+
   .card {
     width: 100%;
   }
@@ -119,9 +120,18 @@ ul {
     font-size: 14px;
   }
 
-  /* 모바일에서는 메뉴 다시 가운데 */
+  /* 메뉴 좌우 꽉 */
   .nav-inner {
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between !important;
+    padding: 15px 10px;
+  }
+
+  /* 버튼 크게 */
+  .youtube-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 22px 0;
+    font-size: 22px;
   }
 }
