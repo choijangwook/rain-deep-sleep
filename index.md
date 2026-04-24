@@ -4,8 +4,8 @@ title: Rain Deep Sleep
 ---
 
 <h1 class="main-title">
-8시간 연속재생, 10분후 화면 꺼짐<br>
-8H Play, Screen Off in 10 Min
+8시간 연속재생, 10분후 화면만 꺼집니다<br>
+8 hours play, screen turns off in 10 minutes<br>
 </h1>
 
 <!-- 광고 -->
