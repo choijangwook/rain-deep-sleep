@@ -1,41 +1,52 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<article>
+  <title>{{ page.title }}</title>
 
-<h1>{{ page.title }}</h1>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
 
-<!-- 🔥 반응형 유튜브 (모바일 안정) -->
-<div class="video-container">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/{{ page.video }}?playsinline=1&rel=0&modestbranding=1"
-    title="YouTube video"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
+<body>
 
-<!-- 🔥 모바일 재생 안될 경우 대비 버튼 -->
-<p style="margin-top:15px;">
-  <a href="https://www.youtube.com/watch?v={{ page.video }}" target="_blank">
-    ▶ Watch on YouTube
+<header>
+  <h1 class="site-title">Rain & Deep Sleep 🌧️</h1>
+
+  <nav>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/blog' | relative_url }}">Blog</a>
+    <a href="{{ '/about' | relative_url }}">About</a>
+    <a href="{{ '/faq' | relative_url }}">FAQ</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- 🎬 제목 -->
+  <h2>{{ page.title }}</h2>
+
+  <!-- 🎥 썸네일 + 링크 방식 (핵심) -->
+  <div class="video-container">
+    <a href="https://www.youtube.com/watch?v={{ page.video }}" target="_blank">
+      <img src="https://img.youtube.com/vi/{{ page.video }}/maxresdefault.jpg" style="width:100%; border-radius:12px;">
+    </a>
+  </div>
+
+  <!-- ▶ 버튼 -->
+  <a class="yt-button"
+     href="https://www.youtube.com/watch?v={{ page.video }}"
+     target="_blank">
+     ▶ Watch on YouTube
   </a>
-</p>
 
-<br>
+  <!-- 📝 설명 -->
+  <div class="post-content">
+    {{ content }}
+  </div>
 
-<!-- 영상 위 설명 -->
-<div>
-  {{ page.intro }}
-</div>
+</main>
 
-<hr>
-
-<!-- 영상 아래 설명 -->
-<div>
-  {{ page.desc }}
-</div>
-
-</article>
+</body>
+</html>
