@@ -5,7 +5,7 @@ title: About
 
 # About
 
-### 🌧️ Fall asleep easily with the sound of rain.<br>
+### Fall asleep easily with the sound of rain.<br>
 ### Natural rain sounds take away your stress and help you sleep quickly.<br>
 ### We made this video to help you rest and sleep well.<br>
 ### 깊고 편안한 수면을 위한 빗소리입니다.<br>
