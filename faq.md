@@ -2,13 +2,13 @@
 title: FAQ
 ---
 
-# Frequently Asked Questions
+# FAQ
 
 ## What is this site?
-A collection of calming rain sounds for sleep and focus.
+Rain sound for sleep and focus.
 
 ## Is it free?
-Yes, completely free to use.
+Yes, completely free.
 
 ## Can I use it for studying?
-Yes, it is designed for focus and study background sound.
+Yes.
