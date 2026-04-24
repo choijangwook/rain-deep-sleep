@@ -1,52 +1,13 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: default
+---
 
-  <title>{{ page.title }}</title>
+<article>
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
+<h1>{{ page.title }}</h1>
 
-<body>
+<p>{{ page.date }}</p>
 
-<header>
-  <h1 class="site-title">Rain & Deep Sleep 🌧️</h1>
+{{ content }}
 
-  <nav>
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/blog' | relative_url }}">Blog</a>
-    <a href="{{ '/about' | relative_url }}">About</a>
-    <a href="{{ '/faq' | relative_url }}">FAQ</a>
-  </nav>
-</header>
-
-<main>
-
-  <!-- 🎬 제목 -->
-  <h2>{{ page.title }}</h2>
-
-  <!-- 🎥 썸네일 + 링크 방식 (핵심) -->
-  <div class="video-container">
-    <a href="https://www.youtube.com/watch?v={{ page.video }}" target="_blank">
-      <img src="https://img.youtube.com/vi/{{ page.video }}/maxresdefault.jpg" style="width:100%; border-radius:12px;">
-    </a>
-  </div>
-
-  <!-- ▶ 버튼 -->
-  <a class="yt-button"
-     href="https://www.youtube.com/watch?v={{ page.video }}"
-     target="_blank">
-     ▶ Watch on YouTube
-  </a>
-
-  <!-- 📝 설명 -->
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-</main>
-
-</body>
-</html>
+</article>
