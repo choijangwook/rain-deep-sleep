@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Rain in Forest Tent"
+title: "Rain Sound Inside Wooden House"
 date: 2026-04-23
-youtube_id: z9EeJnHKQ1M
+youtube_id: qstgnUFHMHA
 ---
 
 ## 🎧 Watch on YouTube
@@ -13,4 +13,15 @@ youtube_id: z9EeJnHKQ1M
 
 ---
 
-Relaxing rain sound inside a forest tent.
+Relax inside a cozy wooden house while gentle rain falls outside.
+
+This sound is perfect for:
+
+- Deep sleep  
+- Focus and studying  
+- Stress relief  
+- Relaxation  
+
+---
+
+Enjoy the calm and peaceful rain ambience.
