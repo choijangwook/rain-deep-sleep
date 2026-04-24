@@ -5,13 +5,15 @@ title: Blog
 
 # Blog
 
-Latest posts:
+<div class="card-container">
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      ({{ post.date | date: "%Y-%m-%d" }})
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+  <div class="card">
+    <a href="{{ site.baseurl }}{{ post.url }}">
+      <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/0.jpg">
+      <h3>{{ post.title }}</h3>
+    </a>
+  </div>
+{% endfor %}
+
+</div>
