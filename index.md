@@ -9,25 +9,15 @@ Calming rain sounds for sleep, focus, and relaxation.
 
 ## Latest Posts
 
-<div style="display:flex; gap:20px; flex-wrap:wrap;">
+<div class="card-container">
 
-{% for post in site.posts limit:3 %}
-  {% assign youtube_id = "" %}
-
-  {% if post.title contains "Wooden House" %}
-    {% assign youtube_id = "qstgnUFHMHA" %}
-  {% elsif post.title contains "Forest Tent" %}
-    {% assign youtube_id = "z9EeJnHKQ1M" %}
-  {% endif %}
-
-  <div style="width:300px;">
+{% for post in site.posts limit:6 %}
+  <div class="card">
     <a href="{{ site.baseurl }}{{ post.url }}">
-      <img src="https://img.youtube.com/vi/{{ youtube_id }}/0.jpg" 
-           style="width:100%; border-radius:10px;">
-      <p><strong>{{ post.title }}</strong></p>
+      <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/0.jpg">
+      <h3>{{ post.title }}</h3>
     </a>
   </div>
-
 {% endfor %}
 
 </div>
