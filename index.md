@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Rain Deep Sleep
 ---
 
@@ -6,9 +7,8 @@ title: Rain Deep Sleep
 
 Calming rain sounds for sleep, focus, and relaxation.
 
-## Navigation
+## Menu
 
-- Home
 - About
 - Blog
 - FAQ
