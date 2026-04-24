@@ -1,4 +1,5 @@
 ---
+layout: default
 title: FAQ
 ---
 
@@ -8,7 +9,7 @@ title: FAQ
 Rain sound for sleep and focus.
 
 ## Is it free?
-Yes, completely free.
+Yes.
 
 ## Can I use it for studying?
 Yes.
