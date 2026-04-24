@@ -4,9 +4,4 @@ title: Blog
 
 # Blog
 
-Welcome to the Rain Deep Sleep blog.
-
-Here you will find posts about:
-- Sleep improvement
-- Focus techniques
-- Relaxation soundscapes
+Articles about rain sounds for sleep, focus, and relaxation.
