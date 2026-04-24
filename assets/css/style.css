@@ -16,7 +16,7 @@ body {
   margin: 20px 0;
 }
 
-/* NAV (가로 정렬) */
+/* NAV */
 .nav {
   width: 100%;
   background: #111;
@@ -24,11 +24,9 @@ body {
 
 .nav-inner {
   display: flex;
-  flex-direction: row;            /* 🔥 가로 */
-  justify-content: center;        /* 가운데 정렬 */
+  justify-content: space-between;  /* 🔥 좌우 꽉 */
   align-items: center;
-  gap: 25px;
-  padding: 15px 0;
+  padding: 15px 20px;
 }
 
 .nav a {
@@ -92,15 +90,23 @@ body {
   text-align: center;
 }
 
-/* 🔥 리스트 점 제거 */
+/* 리스트 점 제거 */
 ul {
   list-style: none;
   padding-left: 0;
 }
 
-/* 본문 글자 */
-p {
-  font-size: 14px;
+/* 🔥 버튼 크게 */
+.youtube-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 18px 30px;
+  font-size: 20px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 /* 모바일 */
@@ -111,5 +117,11 @@ p {
 
   .main-title {
     font-size: 14px;
+  }
+
+  /* 모바일에서는 메뉴 다시 가운데 */
+  .nav-inner {
+    justify-content: center;
+    gap: 20px;
   }
 }
