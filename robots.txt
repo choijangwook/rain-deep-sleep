@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://choijangwook.github.io/rain-deep-sleep/sitemap.xml
+Sitemap: https://choijangwook.github.io
