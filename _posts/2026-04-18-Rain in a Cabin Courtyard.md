@@ -3,7 +3,6 @@
 layout: post
 title: "Rain in a Cabin Courtyard"
 date: 2026-04-18
-categories: [cabin]
 youtube_id: z9EeJnHKQ1M
 
 ---
