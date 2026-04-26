@@ -2,7 +2,7 @@
 layout: post
 title: "Rain in a Mountain Cabin Garden"
 date: 2026-04-18
-categories: [cabin]
+ 
 youtube_id: RJssd1bsTI8
 
 ---
