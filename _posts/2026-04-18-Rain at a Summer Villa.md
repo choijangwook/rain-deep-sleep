@@ -2,7 +2,7 @@
 layout: post
 title: "Rain at a Summer Villa"
 date: 2026-04-18
-categories: [nature]
+
 youtube_id: DIv_U8pbWIA
 
 ---
