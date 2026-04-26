@@ -3,7 +3,7 @@
 layout: post
 title: "Rain in an Old Neighborhood"
 date: 2026-04-18
-categories: [cabin]
+ 
 youtube_id: PbsIW4xx1Tg
 
 ---
