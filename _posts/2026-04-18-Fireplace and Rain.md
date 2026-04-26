@@ -2,7 +2,7 @@
 layout: post
 title: "Fireplace and Rain"
 date: 2026-04-18
-categories: [cabin]
+
 youtube_id: apBWQhWQXQo
 
 ---
