@@ -8,9 +8,12 @@ title: Blog
 <div class="post-list">
 {% for post in site.posts %}
   <div class="post-item">
-    <a href="{{ site.baseurl }}{{ post.url }}">
-      <img src="{{ site.baseurl }}/assets/thumb.jpg" alt="thumbnail">
+    <a href="{{ post.url | relative_url }}">
+
+      <img src="{{ '/assets/thumb.png' | relative_url }}" alt="thumbnail">
+
       <h2>{{ post.title }}</h2>
+
     </a>
   </div>
 {% endfor %}
