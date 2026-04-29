@@ -6,15 +6,14 @@ layout: default
 
   <h1 class="post-title">{{ page.title }}</h1>
 
-  <!-- 🔥 유튜브 썸네일 (클릭 재생 복구 핵심) -->
+  <!-- 🔥 유튜브 썸네일 (유튜브로만 이동) -->
   {% if page.youtube_id %}
     <a class="thumb-link"
        href="https://www.youtube.com/watch?v={{ page.youtube_id }}"
        target="_blank">
 
       <img class="yt-thumb"
-        src="https://img.youtube.com/vi/{{ page.youtube_id }}/hqdefault.jpg"
-        alt="thumbnail">
+        src="https://img.youtube.com/vi/{{ page.youtube_id }}/hqdefault.jpg">
 
     </a>
   {% endif %}
@@ -31,10 +30,8 @@ layout: default
     <button data-time="0">OFF</button>
   </div>
 
-  <!-- 🔥 AD -->
   <div class="ad-slot">AdSense Mid</div>
 
-  <!-- CONTENT -->
   <div class="content">
     {{ content }}
   </div>
