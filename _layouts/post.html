@@ -10,28 +10,39 @@ layout: default
   {% if page.youtube_id %}
     <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank">
       <img class="yt-thumb"
-        src="https://img.youtube.com/vi/{{ page.youtube_id }}/hqdefault.jpg"
-        alt="youtube thumbnail">
+        src="https://img.youtube.com/vi/{{ page.youtube_id }}/hqdefault.jpg">
     </a>
   {% endif %}
 
-  <!-- 🔥 유튜브 버튼 -->
-  {% if page.youtube_id %}
-    <a class="youtube-button"
-       href="https://www.youtube.com/watch?v={{ page.youtube_id }}"
-       target="_blank">
-      ▶ Play on YouTube
-    </a>
-  {% endif %}
+  <!-- 🔥 Start 버튼 (Brave 대응 유지) -->
+  <button id="start-button" class="start-button">▶ Start Sleep</button>
 
-  <!-- 🔥 애드센스 자리 (중요) -->
-  <div class="ad-slot">
-    <!-- Google AdSense code here -->
+  <!-- 🔥 오디오 -->
+  <audio id="main-audio" loop>
+    <source src="/assets/audio/rain.mp3">
+  </audio>
+
+  <!-- 🔥 타이머 (복구 핵심) -->
+  <div id="timer-display" class="timer-display">-</div>
+
+  <div class="timer-container">
+    <button data-time="30">30m</button>
+    <button data-time="60">1h</button>
+    <button data-time="120">2h</button>
+    <button data-time="240">4h</button>
+    <button data-time="480">8h</button>
+    <button data-time="0">OFF</button>
   </div>
 
-  <!-- 🔥 콘텐츠 -->
+  <!-- 🔥 AD SLOT (복구) -->
+  <div class="ad-slot">AdSense Mid</div>
+
+  <!-- 콘텐츠 -->
   <div class="content">
     {{ content }}
   </div>
+
+  <!-- 🔥 AD SLOT -->
+  <div class="ad-slot">AdSense Bottom</div>
 
 </article>
