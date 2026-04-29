@@ -1,41 +1,22 @@
 ---
 layout: default
-title: Rain Deep Sleep
+title: Home
 ---
 
-<h1 class="main-title">
-8 hours play, screen turns off in 10 minutes<br>
-8시간 연속재생, 10분후 화면만 꺼집니다<br>
-</h1>
+<h1>🌧 Rain Deep Sleep</h1>
 
-<!-- 광고 -->
+<p>Relaxing rain sounds for deep sleep.</p>
+
 <div class="ad-box">
-  <!-- 애드센스 코드 넣는 자리 -->
+  <!-- 🔥 여기에 애드센스 코드 넣기 -->
+  AdSense Area
 </div>
 
-## Latest Posts
-
-<div class="card-container">
-
-{% for post in site.posts limit:6 %}
-  <div class="card">
-
-    <!-- 썸네일 → 유튜브 이동 -->
-    <a href="https://www.youtube.com/watch?v={{ post.youtube_id }}">
-      <div class="thumb">
-        <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/0.jpg">
-        <div class="play-button"></div>
-      </div>
-    </a>
-
-    <!-- 제목 → 상세페이지 -->
-    <h3 class="card-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h3>
-
-  </div>
+{% for post in site.posts %}
+<div class="post-item">
+  <a href="{{ site.baseurl }}{{ post.url }}">
+    <img src="/assets/thumb.jpg">
+    <h2>{{ post.title }}</h2>
+  </a>
+</div>
 {% endfor %}
-
-</div>
