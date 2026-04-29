@@ -11,26 +11,18 @@
 
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="{{ '/' | relative_url }}">Home</a>
     <a href="{{ '/blog.html' | relative_url }}">Blog</a>
     <a href="{{ '/about.html' | relative_url }}">About</a>
     <a href="{{ '/faq.html' | relative_url }}">FAQ</a>
-    <a href="{{ '/privacy.html' | relative_url }}">Privacy</a>
   </div>
 </nav>
-
-<!-- AD TOP -->
-<div class="ad-slot">AdSense</div>
 
 <main class="container">
   {{ content }}
 </main>
-
-<!-- AD BOTTOM -->
-<div class="ad-slot">AdSense</div>
 
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
