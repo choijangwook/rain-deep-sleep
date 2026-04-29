@@ -4,22 +4,18 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
 
-  <!-- 모바일 최적화 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 🔥 모바일 확대 방지 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- SEO 기본 -->
   <meta name="description" content="Relaxing rain sounds for deep sleep and calm nights.">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 
-  <!-- 네이버 인증 -->
   <meta name="naver-site-verification" content="c52b32186d2221e42285ba403c4245032466475a" />
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="{{ site.baseurl }}/">Home</a>
@@ -29,13 +25,12 @@
   </div>
 </nav>
 
-<!-- MAIN CONTENT -->
-<main class="main">
+<main class="main container">
   {{ content }}
 </main>
 
-<!-- 🔥 JS (캐시 방지 버전) -->
-<script src="{{ site.baseurl }}/assets/js/main.js?v=5"></script>
+<!-- 🔥 JS -->
+<script src="{{ site.baseurl }}/assets/js/main.js?v=10"></script>
 
 </body>
 </html>
