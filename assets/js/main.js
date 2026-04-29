@@ -27,7 +27,7 @@ function setSleepTimer(minutes) {
 
   if (!audio || !display) return;
 
-  audio.play().catch(()=>{});
+  audio.play().catch(() => {});
 
   clearAllTimers();
   setActiveButton(minutes);
@@ -69,14 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buttons.forEach(btn => {
 
-    const handler = (e) => {
+    btn.addEventListener("pointerup", (e) => {
       e.preventDefault();
-      e.stopPropagation(); // 🔥 Brave 핵심
       setSleepTimer(parseInt(btn.dataset.time));
-    };
+    });
 
-    btn.addEventListener("click", handler);
-    btn.addEventListener("touchend", handler, { passive: false });
   });
 
 });
