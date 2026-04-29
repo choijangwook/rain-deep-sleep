@@ -6,12 +6,11 @@ html, body {
   font-family: Arial, sans-serif;
 
   overflow-x: hidden;
-
-  /* 🔥 모바일 확대 방지 */
-  touch-action: manipulation;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* ===== NAV (중앙 복구) ===== */
+/* ===== NAV ===== */
 .nav {
   border-bottom: 1px solid #333;
 }
@@ -28,11 +27,13 @@ html, body {
   color: #fff;
   text-decoration: none;
   padding: 6px 10px;
-  border: 1px solid #333;
+
+  /* 🔥 외곽선 */
+  border: 1px solid #fff;
   border-radius: 6px;
 }
 
-/* ===== 컨테이너 ===== */
+/* ===== CONTAINER (PC 중앙 문제 해결 핵심) ===== */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -47,17 +48,21 @@ html, body {
   border-radius: 10px;
 }
 
+/* 🔥 제목 간격 문제 해결 */
+.post-title {
+  margin: 10px 0;
+}
+
 /* ===== 타이머 ===== */
 .timer-display {
   text-align: center;
-  margin-top: 15px;
-  font-size: 18px;
+  margin-top: 10px;
 }
 
 .timer-container {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
   margin-top: 10px;
 }
 
@@ -75,18 +80,6 @@ html, body {
   color: #000;
 }
 
-/* ===== START 버튼 ===== */
-.start-button {
-  width: 100%;
-  padding: 16px;
-  margin-top: 15px;
-  background: #00c853;
-  color: #000;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
 /* ===== AD ===== */
 .ad-slot {
   margin: 25px 0;
@@ -97,13 +90,14 @@ html, body {
   color: #777;
 }
 
-/* ===== 모바일 ===== */
+/* ===== 모바일 밀림 해결 ===== */
 @media (max-width: 768px) {
   .container {
     padding: 15px;
+    max-width: 100%;
   }
 
-  .timer-container {
-    flex-direction: column;
+  body {
+    overflow-x: hidden;
   }
 }
