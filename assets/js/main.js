@@ -31,7 +31,7 @@ function setSleepTimer(minutes) {
   setActiveButton(minutes);
 
   if (minutes === 0) {
-    display.innerText = "⛔ Timer OFF";
+    display.innerText = "⛔ OFF";
     return;
   }
 
@@ -61,14 +61,15 @@ function setSleepTimer(minutes) {
   }, minutes * 60 * 1000);
 }
 
-/* 🔥 모바일 포함 안정 클릭 */
+/* 🔥 모바일 포함 완전 대응 */
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".timer-container button");
 
   buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      setSleepTimer(parseInt(btn.dataset.time));
-    });
+    const handler = () => setSleepTimer(parseInt(btn.dataset.time));
+
+    btn.addEventListener("click", handler);
+    btn.addEventListener("touchstart", handler); // 🔥 핵심
   });
 
   const audio = getAudio();
