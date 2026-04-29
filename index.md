@@ -8,10 +8,9 @@ title: Home
 {% for post in site.posts %}
 
 <div class="post-item"
-     onclick="openPost('{{ post.title }}','{{ post.youtube_id }}')">
+     onclick="openModal('{{ post.title }}','{{ post.youtube_id }}')">
 
-  <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/hqdefault.jpg"
-       alt="thumbnail">
+  <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/hqdefault.jpg">
 
   <h2>{{ post.title }}</h2>
 
@@ -21,22 +20,35 @@ title: Home
 
 </div>
 
-<!-- 🔥 플레이어 + 타이머 영역 -->
-<div id="player-area" class="player-area">
+<!-- 🔥 모달 -->
+<div id="modal" class="modal">
 
-  <h2 id="player-title"></h2>
+  <div class="modal-content">
 
-  <img id="player-thumb" src="">
+    <span class="close" onclick="closeModal()">×</span>
 
-  <div id="timer-display">No timer</div>
+    <h2 id="modal-title"></h2>
 
-  <div class="timer-container">
-    <button data-time="30">30m</button>
-    <button data-time="60">1h</button>
-    <button data-time="120">2h</button>
-    <button data-time="240">4h</button>
-    <button data-time="480">8h</button>
-    <button data-time="0">OFF</button>
+    <div class="video-wrapper">
+      <iframe id="yt-frame"
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div id="timer-display">No timer</div>
+
+    <div class="timer-container">
+      <button data-time="30">30m</button>
+      <button data-time="60">1h</button>
+      <button data-time="120">2h</button>
+      <button data-time="240">4h</button>
+      <button data-time="480">8h</button>
+      <button data-time="0">OFF</button>
+    </div>
+
   </div>
 
 </div>
