@@ -27,7 +27,6 @@ function setSleepTimer(minutes) {
 
   if (!audio || !display) return;
 
-  // 🔥 모바일 핵심
   audio.play().catch(() => {});
 
   clearAllTimers();
@@ -55,7 +54,7 @@ function setSleepTimer(minutes) {
   sleepTimer = setTimeout(() => {
     audio.pause();
     audio.currentTime = 0;
-    audio.src = ""; // 🔥 완전 정지
+    audio.src = "";
 
     display.innerText = "😴 Sleep well";
 
@@ -64,16 +63,19 @@ function setSleepTimer(minutes) {
   }, minutes * 60 * 1000);
 }
 
-/* 🔥 이벤트 단 하나만 */
 document.addEventListener("DOMContentLoaded", () => {
 
   const buttons = document.querySelectorAll(".timer-container button");
 
   buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
+
+    const handler = (e) => {
+      e.preventDefault(); // 🔥 모바일 핵심
       setSleepTimer(parseInt(btn.dataset.time));
-    });
+    };
+
+    btn.addEventListener("click", handler);
+    btn.addEventListener("touchend", handler, { passive: false }); // 🔥 핵심
   });
 
 });
-
