@@ -1,48 +1,52 @@
 let sleepTimer = null;
 let countdownInterval = null;
 
-function openPost(title, youtubeId) {
-  const area = document.getElementById("player-area");
+function openModal(title, videoId) {
+  const modal = document.getElementById("modal");
+  const frame = document.getElementById("yt-frame");
 
-  document.getElementById("player-title").innerText = title;
+  document.getElementById("modal-title").innerText = title;
 
-  const thumb = document.getElementById("player-thumb");
-  thumb.src = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
+  frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 
-  area.style.display = "block";
-
-  window.scrollTo({ top: area.offsetTop, behavior: "smooth" });
+  modal.style.display = "block";
 }
 
-function setActiveButton(minutes) {
-  document.querySelectorAll(".timer-container button").forEach(btn => {
-    btn.classList.remove("active");
-    if (btn.dataset.time == minutes) btn.classList.add("active");
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("yt-frame").src = "";
+
+  clearInterval(countdownInterval);
+  clearTimeout(sleepTimer);
+}
+
+function setActiveButton(min) {
+  document.querySelectorAll(".timer-container button").forEach(b => {
+    b.classList.remove("active");
+    if (b.dataset.time == min) b.classList.add("active");
   });
 }
 
-function setSleepTimer(minutes) {
+function setTimer(min) {
   const display = document.getElementById("timer-display");
 
   clearInterval(countdownInterval);
   clearTimeout(sleepTimer);
 
-  setActiveButton(minutes);
+  setActiveButton(min);
 
-  if (minutes == 0) {
+  if (min == 0) {
     display.innerText = "OFF";
     return;
   }
 
-  let t = minutes * 60;
+  let t = min * 60;
 
   countdownInterval = setInterval(() => {
     let m = Math.floor(t / 60);
     let s = t % 60;
-
     display.innerText = `${m}:${s.toString().padStart(2, "0")}`;
     t--;
-
     if (t < 0) clearInterval(countdownInterval);
   }, 1000);
 }
@@ -50,7 +54,7 @@ function setSleepTimer(minutes) {
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".timer-container button").forEach(btn => {
     btn.addEventListener("click", () => {
-      setSleepTimer(parseInt(btn.dataset.time));
+      setTimer(parseInt(btn.dataset.time));
     });
   });
 });
