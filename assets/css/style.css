@@ -1,137 +1,152 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* =========================
+   GLOBAL
+========================= */
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: #e5e5e5;
+  line-height: 1.6;
 }
 
-/* 메인 타이틀 */
-.main-title {
-  font-size: 18px;
-  text-align: center;
-  white-space: nowrap;
-  margin: 20px 0;
-}
-
-/* NAV */
-.nav {
-  width: 100%;
-  background: #111;
-}
-
-.nav-inner {
-  display: flex;
-  justify-content: space-between;  /* PC 좌우 꽉 */
-  align-items: center;
-  padding: 15px 20px;
-}
-
-.nav a {
-  color: white;
+a {
+  color: #9ecbff;
   text-decoration: none;
-  font-weight: bold;
 }
 
-/* 메인 */
-.main {
-  width: 100%;
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* 카드 */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
-.card {
-  width: 300px;
+h2 {
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.thumb {
-  position: relative;
-}
-
-.thumb img {
+/* =========================
+   YOUTUBE BUTTON
+========================= */
+.youtube-button {
+  display: block;
   width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  text-align: center;
+  background: #ff0000;
+  color: white;
+  font-weight: 500;
   border-radius: 10px;
+  transition: 0.2s;
 }
 
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+.youtube-button:hover {
+  background: #cc0000;
 }
 
-.play-button::before {
-  content: "";
-  position: absolute;
-  left: 22px;
-  top: 18px;
-  border-left: 18px solid white;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
+/* =========================
+   AUDIO PLAYER
+========================= */
+audio {
+  width: 100%;
+  margin-top: 15px;
 }
 
-/* 카드 제목 */
-.card-title {
-  font-size: 14px;
-  margin-top: 8px;
+/* =========================
+   TIMER DISPLAY
+========================= */
+.timer-display {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #ccc;
   text-align: center;
 }
 
-/* 리스트 점 제거 */
-ul {
-  list-style: none;
-  padding-left: 0;
+/* =========================
+   TIMER BUTTONS
+========================= */
+.timer-container {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-/* ▶ 버튼 (PC) */
-.youtube-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 18px 30px;
-  font-size: 20px;
-  background: red;
+/* 버튼 기본 */
+.timer-container button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #222;
   color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
 }
 
-/* 🔥 모바일 최종 강제 적용 */
+/* hover */
+.timer-container button:hover {
+  background: #444;
+}
+
+/* =========================
+   POST CONTENT
+========================= */
+.post {
+  margin-top: 20px;
+}
+
+.content {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #ddd;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
 @media (max-width: 768px) {
 
-  .card {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  /* 버튼 전체폭 */
+  .timer-container {
+    flex-direction: column;
+  }
+
+  .timer-container button {
     width: 100%;
+    font-size: 16px;
+    padding: 18px;
   }
 
-  .main-title {
-    font-size: 14px;
-  }
-
-  /* 메뉴 좌우 꽉 */
-  .nav-inner {
-    justify-content: space-between !important;
-    padding: 15px 10px;
-  }
-
-  /* 버튼 크게 */
   .youtube-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 22px 0;
-    font-size: 22px;
+    padding: 16px;
+    font-size: 16px;
   }
 }
