@@ -7,10 +7,6 @@ youtube_id: 25kaRUX4McU
 
 ---
 
-<a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank" class="youtube-button">
-▶ Play on YouTube
-</a>
-
 Rain sounds for a deep and restful sleep. <br>
 In the quiet of the night, the natural sound of <br>
 rain eases tension and helps you drift into a deep <br>
