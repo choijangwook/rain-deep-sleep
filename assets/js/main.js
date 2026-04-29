@@ -64,16 +64,9 @@ function setSleepTimer(minutes) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  const buttons = document.querySelectorAll(".timer-container button");
-
-  buttons.forEach(btn => {
-
-    btn.addEventListener("pointerup", (e) => {
-      e.preventDefault();
+  document.querySelectorAll(".timer-container button").forEach(btn => {
+    btn.addEventListener("click", () => {
       setSleepTimer(parseInt(btn.dataset.time));
     });
-
   });
-
 });
