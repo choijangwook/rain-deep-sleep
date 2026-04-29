@@ -1,12 +1,10 @@
 let sleepTimer = null;
 let countdownInterval = null;
 
-// 저장된 값 불러오기
 let defaultTimerMinutes = localStorage.getItem("sleepTimer")
   ? parseInt(localStorage.getItem("sleepTimer"))
   : 60;
 
-// 버튼 active 처리
 function setActiveButton(minutes) {
   const buttons = document.querySelectorAll(".timer-container button");
 
@@ -19,7 +17,6 @@ function setActiveButton(minutes) {
   });
 }
 
-// 타이머 설정
 function setSleepTimer(minutes) {
   const audio = document.querySelector("audio");
   const display = document.getElementById("timer-display");
@@ -30,7 +27,7 @@ function setSleepTimer(minutes) {
   setActiveButton(minutes);
 
   if (minutes === 0) {
-    if (display) display.innerText = "Timer OFF";
+    if (display) display.innerText = "⛔ Timer OFF";
     localStorage.setItem("sleepTimer", 0);
     return;
   }
@@ -67,14 +64,12 @@ function setSleepTimer(minutes) {
   }, minutes * 60 * 1000);
 }
 
-// 초기 로드
 document.addEventListener("DOMContentLoaded", () => {
   const audio = document.querySelector("audio");
 
   if (!audio) return;
 
-  // 저장된 값 버튼 표시
-  if (defaultTimerMinutes) {
+  if (defaultTimerMinutes >= 0) {
     setActiveButton(defaultTimerMinutes);
   }
 
@@ -85,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// 정리
 window.addEventListener("beforeunload", () => {
   if (sleepTimer) clearTimeout(sleepTimer);
   if (countdownInterval) clearInterval(countdownInterval);
