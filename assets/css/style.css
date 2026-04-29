@@ -1,13 +1,22 @@
+/* ===== 기본 ===== */
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   background: #0d0d0d;
   color: #eee;
   font-family: Arial, sans-serif;
+
+  /* 🔥 모바일 터치 안정화 */
+  touch-action: manipulation;
+  overflow-x: hidden;
 }
 
-/* ===== NAV ===== */
+/* 모든 요소 클릭 가능 */
+body * {
+  pointer-events: auto;
+}
+
+/* ===== 네비 ===== */
 .nav {
   border-bottom: 1px solid #333;
 }
@@ -21,23 +30,21 @@ html, body {
 }
 
 .nav-inner a {
+  color: #fff;
+  text-decoration: none;
   padding: 6px 10px;
   border: 1px solid #333;
   border-radius: 6px;
 }
 
-/* ===== CONTAINER ===== */
-.container {
+/* ===== 레이아웃 ===== */
+.container,
+.main {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-}
-
-/* 🔥 핵심: 레이아웃 강제 안정 */
-.main {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* ===== 썸네일 카드 ===== */
@@ -47,31 +54,58 @@ html, body {
   margin-bottom: 25px;
 }
 
-/* 🔥 썸네일 정상화 핵심 */
+.post-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .post-item img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
-/* 🔥 제목 위치 정상 */
 .post-item h2 {
   margin: 8px 0 0 0;
   font-size: 16px;
+  color: #fff;
 }
 
-/* ===== TIMER ===== */
+/* ===== 유튜브 버튼 ===== */
+.youtube-button {
+  display: block;
+  margin-top: 10px;
+  padding: 14px;
+  text-align: center;
+  background: #ff0000;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* ===== 오디오 숨김 ===== */
+audio {
+  display: none;
+}
+
+/* ===== 타이머 ===== */
 .timer-display {
   text-align: center;
   margin-top: 15px;
   font-size: 18px;
+  color: #fff;
 }
 
+/* 🔥 클릭 우선순위 최상위 */
 .timer-container {
   display: flex;
   gap: 10px;
   margin-top: 15px;
   flex-wrap: wrap;
+
+  position: relative;
+  z-index: 9999;
 }
 
 .timer-container button {
@@ -82,28 +116,26 @@ html, body {
   border: 1px solid #333;
   border-radius: 10px;
   cursor: pointer;
+
+  /* 🔥 모바일 핵심 */
+  touch-action: manipulation;
+
+  position: relative;
+  z-index: 10000;
 }
 
+/* 🔥 눌림 상태 확실하게 */
 .timer-container button.active {
   background: #00c853 !important;
   color: #000 !important;
   border: 2px solid #00e676 !important;
 }
 
-/* ===== YOUTUBE ===== */
-.youtube-button {
-  background: #ff0000;
-  display: block;
-  padding: 14px;
-  text-align: center;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
 /* ===== 모바일 ===== */
 @media (max-width: 768px) {
 
-  .container, .main {
+  .container,
+  .main {
     padding: 15px;
   }
 
@@ -114,25 +146,4 @@ html, body {
   .timer-container button {
     width: 100%;
   }
-
-}
-.timer-container {
-  position: relative;
-  z-index: 10; /* 🔥 클릭 막힘 방지 */
-}
-
-.timer-container button {
-  touch-action: manipulation;
-}
-.timer-container {
-  position: relative;
-  z-index: 9999; /* 🔥 최상단으로 올림 */
-}
-
-.timer-container button {
-  position: relative;
-  z-index: 10000;
-}
-iframe {
-  pointer-events: none !important;
 }
