@@ -12,11 +12,14 @@ layout: default
     </a>
   {% endif %}
 
+  <!-- 🔥 오디오 (이건 유지) -->
   <audio id="main-audio" controls autoplay loop>
     <source src="/assets/audio/rain.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- 🔥 TIMER 버튼만 유지 -->
+  <!-- 🔥 카운트다운 복구 -->
+  <div id="timer-display" class="timer-display">No timer</div>
+
   <div class="timer-container">
     <button data-time="30">30m</button>
     <button data-time="60">1h</button>
