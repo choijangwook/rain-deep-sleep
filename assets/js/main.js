@@ -1,5 +1,6 @@
 let sleepTimer = null;
 let countdownInterval = null;
+let lastTriggerTime = 0; // 🔥 중복 실행 방지
 
 function getAudio() {
   return document.getElementById("main-audio");
@@ -64,9 +65,28 @@ function setSleepTimer(minutes) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".timer-container button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      setSleepTimer(parseInt(btn.dataset.time));
-    });
+
+  const buttons = document.querySelectorAll(".timer-container button");
+
+  buttons.forEach(btn => {
+
+    const handler = (e) => {
+      const now = Date.now();
+
+      // 🔥 중복 실행 방지 (200ms)
+      if (now - lastTriggerTime < 200) return;
+      lastTriggerTime = now;
+
+      e.preventDefault();
+
+      const time = parseInt(btn.dataset.time);
+      setSleepTimer(time);
+    };
+
+    // 🔥 모든 환경 커버
+    btn.addEventListener("click", handler);
+    btn.addEventListener("touchstart", handler, { passive: false });
+    btn.addEventListener("pointerdown", handler);
   });
+
 });
