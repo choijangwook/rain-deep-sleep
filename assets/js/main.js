@@ -1,19 +1,33 @@
 let sleepTimer = null;
 let countdownInterval = null;
 
-// 기본값 (저장값 있으면 그걸 사용)
+// 저장된 값 불러오기
 let defaultTimerMinutes = localStorage.getItem("sleepTimer")
   ? parseInt(localStorage.getItem("sleepTimer"))
   : 60;
+
+// 버튼 active 처리
+function setActiveButton(minutes) {
+  const buttons = document.querySelectorAll(".timer-container button");
+
+  buttons.forEach(btn => {
+    btn.classList.remove("active");
+
+    if (btn.dataset.time == minutes) {
+      btn.classList.add("active");
+    }
+  });
+}
 
 // 타이머 설정
 function setSleepTimer(minutes) {
   const audio = document.querySelector("audio");
   const display = document.getElementById("timer-display");
 
-  // 기존 타이머 제거
   if (sleepTimer) clearTimeout(sleepTimer);
   if (countdownInterval) clearInterval(countdownInterval);
+
+  setActiveButton(minutes);
 
   if (minutes === 0) {
     if (display) display.innerText = "Timer OFF";
@@ -21,12 +35,10 @@ function setSleepTimer(minutes) {
     return;
   }
 
-  // 저장
   localStorage.setItem("sleepTimer", minutes);
 
   let remainingSeconds = minutes * 60;
 
-  // 카운트다운 표시
   countdownInterval = setInterval(() => {
     let m = Math.floor(remainingSeconds / 60);
     let s = remainingSeconds % 60;
@@ -42,7 +54,6 @@ function setSleepTimer(minutes) {
     }
   }, 1000);
 
-  // 실제 종료 타이머
   sleepTimer = setTimeout(() => {
     if (audio) {
       audio.pause();
@@ -51,14 +62,21 @@ function setSleepTimer(minutes) {
 
     if (display) display.innerText = "😴 Sleep well";
 
+    setActiveButton(null);
+
   }, minutes * 60 * 1000);
 }
 
-// 자동 타이머 (재생 시)
+// 초기 로드
 document.addEventListener("DOMContentLoaded", () => {
   const audio = document.querySelector("audio");
 
   if (!audio) return;
+
+  // 저장된 값 버튼 표시
+  if (defaultTimerMinutes) {
+    setActiveButton(defaultTimerMinutes);
+  }
 
   audio.addEventListener("play", () => {
     if (!sleepTimer && defaultTimerMinutes > 0) {
@@ -67,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// 페이지 떠날 때 정리
+// 정리
 window.addEventListener("beforeunload", () => {
   if (sleepTimer) clearTimeout(sleepTimer);
   if (countdownInterval) clearInterval(countdownInterval);
