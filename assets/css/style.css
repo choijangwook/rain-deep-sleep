@@ -7,52 +7,56 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* 링크 */
-a, a:visited {
-  color: #fff;
-  text-decoration: none;
-}
-
 /* ===== NAV ===== */
 .nav {
-  border-bottom: 1px solid #333; /* 🔥 외곽선 */
+  border-bottom: 1px solid #333;
 }
 
 .nav-inner {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   padding: 15px;
+  flex-wrap: wrap;
 }
 
 .nav-inner a {
   padding: 6px 10px;
-  border: 1px solid #333; /* 🔥 버튼 느낌 */
+  border: 1px solid #333;
   border-radius: 6px;
 }
 
 /* ===== CONTAINER ===== */
-.container, .main {
+.container {
   max-width: 900px;
-  width: 100%;
   margin: 0 auto;
   padding: 20px;
-  box-sizing: border-box;
 }
 
-/* ===== 썸네일 ===== */
+/* 🔥 핵심: 레이아웃 강제 안정 */
+.main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== 썸네일 카드 ===== */
 .post-item {
-  margin-bottom: 20px;
-}
-
-.post-item img {
-  width: 100%;  /* 🔥 Home 썸네일 복구 */
-  height: auto;
   display: block;
+  width: 100%;
+  margin-bottom: 25px;
 }
 
+/* 🔥 썸네일 정상화 핵심 */
+.post-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 🔥 제목 위치 정상 */
 .post-item h2 {
-  margin: 6px 0 0 0; /* 🔥 바로 아래 */
+  margin: 8px 0 0 0;
   font-size: 16px;
 }
 
@@ -78,8 +82,6 @@ a, a:visited {
   border: 1px solid #333;
   border-radius: 10px;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
 }
 
 .timer-container button.active {
@@ -98,13 +100,12 @@ a, a:visited {
   margin-top: 10px;
 }
 
-/* ===== BLOG overflow 해결 ===== */
-.main, .container {
-  overflow-x: hidden;
-}
-
-/* ===== MOBILE ===== */
+/* ===== 모바일 ===== */
 @media (max-width: 768px) {
+
+  .container, .main {
+    padding: 15px;
+  }
 
   .timer-container {
     flex-direction: column;
