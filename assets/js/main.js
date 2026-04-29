@@ -23,46 +23,40 @@ function setActiveButton(minutes) {
 
 function setSleepTimer(minutes) {
   const audio = getAudio();
-  const display = document.getElementById("timer-display");
-
-  if (!audio || !display) return;
+  if (!audio) return;
 
   clearAllTimers();
   setActiveButton(minutes);
 
-  if (minutes === 0) {
-    display.innerText = "⛔";
-    return;
-  }
-
-  let remaining = minutes * 60;
-
-  display.innerText = `⏳ ${minutes}:00`;
-
-  countdownInterval = setInterval(() => {
-    let m = Math.floor(remaining / 60);
-    let s = remaining % 60;
-
-    display.innerText = `⏳ ${m}:${s.toString().padStart(2, "0")}`;
-    remaining--;
-
-    if (remaining < 0) clearInterval(countdownInterval);
-  }, 1000);
+  if (minutes === 0) return;
 
   sleepTimer = setTimeout(() => {
     audio.pause();
     audio.currentTime = 0;
     audio.volume = 0;
 
-    display.innerText = "😴";
-
     clearAllTimers();
     setActiveButton(null);
   }, minutes * 60 * 1000);
 }
 
-/* 🔥 모바일에서도 자동 실행 보장 */
+/* 🔥 핵심: 모바일 포함 모든 클릭 대응 */
 document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".timer-container button");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const minutes = parseInt(btn.dataset.time);
+      setSleepTimer(minutes);
+    });
+
+    /* 🔥 모바일 터치 대응 */
+    btn.addEventListener("touchstart", () => {
+      const minutes = parseInt(btn.dataset.time);
+      setSleepTimer(minutes);
+    });
+  });
+
   const audio = getAudio();
   if (!audio) return;
 
