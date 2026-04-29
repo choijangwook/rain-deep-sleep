@@ -3,8 +3,7 @@ html, body {
   padding: 0;
   background: #0d0d0d;
   color: #eee;
-  font-family: Arial, sans-serif;
-
+  font-family: Arial;
   overflow-x: hidden;
 }
 
@@ -13,10 +12,6 @@ html, body {
 }
 
 /* NAV */
-.nav {
-  border-bottom: 1px solid #333;
-}
-
 .nav-inner {
   display: flex;
   justify-content: center;
@@ -27,7 +22,10 @@ html, body {
 
 .nav-inner a {
   color: #fff;
+  padding: 6px 10px;
+  border: 1px solid #fff;
   text-decoration: none;
+  border-radius: 6px;
 }
 
 /* 컨테이너 */
@@ -37,39 +35,43 @@ html, body {
   padding: 20px;
 }
 
-/* 썸네일 */
-.yt-thumb {
+/* 🔥 리스트 핵심 */
+.post-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.post-item {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.post-item img {
   width: 100%;
   display: block;
+  border-radius: 8px;
 }
 
-/* 제목 */
-.post-title {
-  margin: 10px 0;
+/* 🔥 제목 위치 FIX */
+.post-item h2 {
+  margin: 8px 0 0 0;
 }
 
-/* 타이머 */
-#timer-display {
-  margin: 10px 0;
+/* 타이머 영역 */
+.player-area {
+  display: none;
+  margin-top: 30px;
+}
+
+.player-area img {
+  width: 100%;
+}
+
+/* 광고 */
+.ad-slot {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px dashed #444;
   text-align: center;
-}
-
-.timer-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.timer-container button {
-  flex: 1;
-  padding: 12px;
-  background: #222;
-  color: #ccc;
-  border: none;
-  border-radius: 6px;
-}
-
-.timer-container button.active {
-  background: #00c853;
-  color: #000;
+  max-width: 900px;
 }
