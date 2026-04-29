@@ -27,8 +27,8 @@ function setSleepTimer(minutes) {
 
   if (!audio || !display) return;
 
-  // 🔥 모바일 핵심: 사용자 제스처로 play
-  audio.play().catch(()=>{});
+  // 🔥 모바일 핵심
+  audio.play().catch(() => {});
 
   clearAllTimers();
   setActiveButton(minutes);
@@ -53,10 +53,9 @@ function setSleepTimer(minutes) {
   }, 1000);
 
   sleepTimer = setTimeout(() => {
-    // 🔥 완전 정지 핵심
     audio.pause();
     audio.currentTime = 0;
-    audio.src = ""; // 🔥 재생 완전 차단
+    audio.src = ""; // 🔥 완전 정지
 
     display.innerText = "😴 Sleep well";
 
@@ -65,6 +64,7 @@ function setSleepTimer(minutes) {
   }, minutes * 60 * 1000);
 }
 
+/* 🔥 이벤트 단 하나만 */
 document.addEventListener("DOMContentLoaded", () => {
 
   const buttons = document.querySelectorAll(".timer-container button");
