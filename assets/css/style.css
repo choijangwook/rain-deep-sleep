@@ -8,6 +8,18 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
+/* 🔥 모든 요소 overflow 방지 */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* 🔥 이미지/iframe 강제 제한 */
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+}
+
 /* 링크 */
 a, a:visited {
   color: #fff;
@@ -15,12 +27,11 @@ a, a:visited {
 }
 
 /* ===== CONTAINER ===== */
-.container, .post {
+.container, .post, .main {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 /* ===== NAV ===== */
@@ -31,14 +42,14 @@ a, a:visited {
   padding: 15px;
 }
 
-/* ===== TIMER DISPLAY ===== */
+/* ===== TIMER ===== */
 .timer-display {
   text-align: center;
   margin-top: 15px;
   font-size: 18px;
 }
 
-/* ===== TIMER BUTTON ===== */
+/* ===== BUTTON ===== */
 .timer-container {
   display: flex;
   gap: 10px;
@@ -81,9 +92,8 @@ a, a:visited {
     overflow-x: hidden;
   }
 
-  .container, .post {
+  .container, .post, .main {
     width: 100%;
-    overflow-x: hidden;
   }
 
   .timer-container {
