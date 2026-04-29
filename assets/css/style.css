@@ -4,15 +4,15 @@ html, body {
   background: #0d0d0d;
   color: #eee;
   font-family: Arial, sans-serif;
+
   overflow-x: hidden;
 }
 
-/* 안정화 */
 * {
   box-sizing: border-box;
 }
 
-/* ===== NAV ===== */
+/* NAV */
 .nav {
   border-bottom: 1px solid #333;
 }
@@ -21,42 +21,37 @@ html, body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
   padding: 15px;
+  flex-wrap: wrap;
 }
 
 .nav-inner a {
   color: #fff;
   text-decoration: none;
-  padding: 6px 10px;
-  border: 1px solid #fff;
-  border-radius: 6px;
 }
 
-/* ===== CONTAINER ===== */
+/* 컨테이너 */
 .container {
-  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* ===== 썸네일 ===== */
+/* 썸네일 */
 .yt-thumb {
   width: 100%;
   display: block;
-  border-radius: 10px;
 }
 
-/* 제목 간격 */
+/* 제목 */
 .post-title {
-  margin: 10px 0 6px 0;
+  margin: 10px 0;
 }
 
-/* ===== 타이머 ===== */
-.timer-display {
-  text-align: center;
+/* 타이머 */
+#timer-display {
   margin: 10px 0;
+  text-align: center;
 }
 
 .timer-container {
@@ -67,31 +62,14 @@ html, body {
 
 .timer-container button {
   flex: 1;
-  padding: 14px;
-  background: #1a1a1a;
+  padding: 12px;
+  background: #222;
   color: #ccc;
-  border: 1px solid #333;
-  border-radius: 10px;
+  border: none;
+  border-radius: 6px;
 }
 
 .timer-container button.active {
   background: #00c853;
   color: #000;
-}
-
-/* ===== AD ===== */
-.ad-slot {
-  margin: 25px 0;
-  padding: 20px;
-  background: #111;
-  border: 1px dashed #333;
-  text-align: center;
-  color: #777;
-}
-
-/* ===== 모바일 밀림 완전 제거 ===== */
-@media (max-width: 768px) {
-  .container {
-    padding: 15px;
-  }
 }
