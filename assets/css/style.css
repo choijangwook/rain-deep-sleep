@@ -7,11 +7,9 @@ html, body {
   overflow-x: hidden;
 }
 
-/* ===== NAV ===== */
-.nav {
-  border-bottom: 1px solid #333;
-}
+* { box-sizing: border-box; }
 
+/* NAV */
 .nav-inner {
   display: flex;
   justify-content: center;
@@ -22,20 +20,13 @@ html, body {
 
 .nav-inner a {
   color: #fff;
-  padding: 6px 10px;
   border: 1px solid #fff;
+  padding: 6px 10px;
   text-decoration: none;
   border-radius: 6px;
 }
 
-/* ===== CONTAINER ===== */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* ===== LIST ===== */
+/* LIST */
 .post-list {
   max-width: 900px;
   margin: 0 auto;
@@ -53,24 +44,61 @@ html, body {
 }
 
 .post-item h2 {
-  margin: 8px 0 0 0;
+  margin: 8px 0 0;
 }
 
-/* ===== PLAYER AREA ===== */
-.player-area {
-  display: none;
-  margin-top: 30px;
-}
-
-.player-area img {
-  width: 100%;
-  display: block;
-}
-
-/* ===== TIMER ===== */
-#timer-display {
-  margin: 10px 0;
+/* AD */
+.ad-slot {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px dashed #444;
   text-align: center;
+  max-width: 900px;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #111;
+  width: 95%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 15px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .timer-container {
@@ -91,13 +119,4 @@ html, body {
 .timer-container button.active {
   background: #00c853;
   color: #000;
-}
-
-/* ===== ADS ===== */
-.ad-slot {
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px dashed #444;
-  text-align: center;
-  max-width: 900px;
 }
