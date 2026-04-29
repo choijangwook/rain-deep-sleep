@@ -44,12 +44,12 @@ function setSleepTimer(minutes) {
     let s = remaining % 60;
 
     display.innerText = `⏳ ${m}:${s.toString().padStart(2, "0")}`;
-
     remaining--;
 
     if (remaining < 0) clearInterval(countdownInterval);
   }, 1000);
 
+  // 🔥 핵심: 확실한 종료
   sleepTimer = setTimeout(() => {
     audio.pause();
     audio.currentTime = 0;
