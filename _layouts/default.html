@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
+
+  <!-- 모바일 최적화 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO 기본 -->
+  <meta name="description" content="Relaxing rain sounds for deep sleep and calm nights.">
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
@@ -14,6 +19,7 @@
 
 <body>
 
+<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="{{ site.baseurl }}/">Home</a>
@@ -23,12 +29,13 @@
   </div>
 </nav>
 
+<!-- MAIN CONTENT -->
 <main class="main">
   {{ content }}
 </main>
 
-<!-- 🔥 JS 반드시 필요 -->
-<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+<!-- 🔥 JS (캐시 방지 버전) -->
+<script src="{{ site.baseurl }}/assets/js/main.js?v=5"></script>
 
 </body>
 </html>
