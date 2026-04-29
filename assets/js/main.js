@@ -27,6 +27,9 @@ function setSleepTimer(minutes) {
 
   if (!audio || !display) return;
 
+  // 🔥 모바일 핵심: 사용자 제스처로 play
+  audio.play().catch(()=>{});
+
   clearAllTimers();
   setActiveButton(minutes);
 
@@ -50,9 +53,10 @@ function setSleepTimer(minutes) {
   }, 1000);
 
   sleepTimer = setTimeout(() => {
+    // 🔥 완전 정지 핵심
     audio.pause();
     audio.currentTime = 0;
-    audio.volume = 0;
+    audio.src = ""; // 🔥 재생 완전 차단
 
     display.innerText = "😴 Sleep well";
 
@@ -61,21 +65,14 @@ function setSleepTimer(minutes) {
   }, minutes * 60 * 1000);
 }
 
-/* 🔥 모바일 포함 완전 대응 */
 document.addEventListener("DOMContentLoaded", () => {
+
   const buttons = document.querySelectorAll(".timer-container button");
 
   buttons.forEach(btn => {
-    const handler = () => setSleepTimer(parseInt(btn.dataset.time));
-
-    btn.addEventListener("click", handler);
-    btn.addEventListener("touchstart", handler); // 🔥 핵심
+    btn.addEventListener("click", () => {
+      setSleepTimer(parseInt(btn.dataset.time));
+    });
   });
 
-  const audio = getAudio();
-  if (!audio) return;
-
-  audio.addEventListener("play", () => {
-    if (!sleepTimer) setSleepTimer(60);
-  });
 });
