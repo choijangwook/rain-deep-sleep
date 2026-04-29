@@ -133,3 +133,6 @@ html, body {
   position: relative;
   z-index: 10000;
 }
+iframe {
+  pointer-events: none !important;
+}
