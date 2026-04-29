@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
 
-  <!-- 모바일 안정 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 🔥 모바일 확대/스크롤 방지 핵심 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAV (중앙 고정) -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="{{ '/' | relative_url }}">Home</a>
@@ -24,12 +23,16 @@
   </div>
 </nav>
 
-<!-- CONTENT -->
+<!-- 🔥 TOP ADS -->
+<div class="ad-slot">AdSense</div>
+
 <main class="container">
   {{ content }}
 </main>
 
-<!-- JS -->
+<!-- 🔥 BOTTOM ADS -->
+<div class="ad-slot">AdSense</div>
+
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
 </body>
