@@ -31,7 +31,7 @@ function setSleepTimer(minutes) {
   setActiveButton(minutes);
 
   if (minutes === 0) {
-    display.innerText = "⛔ Timer OFF";
+    display.innerText = "⛔";
     return;
   }
 
@@ -49,15 +49,26 @@ function setSleepTimer(minutes) {
     if (remaining < 0) clearInterval(countdownInterval);
   }, 1000);
 
-  // 🔥 핵심: 확실한 종료
   sleepTimer = setTimeout(() => {
     audio.pause();
     audio.currentTime = 0;
     audio.volume = 0;
 
-    display.innerText = "😴 Sleep well";
+    display.innerText = "😴";
 
     clearAllTimers();
     setActiveButton(null);
   }, minutes * 60 * 1000);
 }
+
+/* 🔥 모바일에서도 자동 실행 보장 */
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = getAudio();
+  if (!audio) return;
+
+  audio.addEventListener("play", () => {
+    if (!sleepTimer) {
+      setSleepTimer(60);
+    }
+  });
+});
