@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
 
-  <!-- 🔥 모바일 확대/스크롤 방지 핵심 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
 
-<!-- NAV (중앙 고정) -->
+<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="{{ '/' | relative_url }}">Home</a>
@@ -23,14 +22,12 @@
   </div>
 </nav>
 
-<!-- 🔥 TOP ADS -->
 <div class="ad-slot">AdSense</div>
 
 <main class="container">
   {{ content }}
 </main>
 
-<!-- 🔥 BOTTOM ADS -->
 <div class="ad-slot">AdSense</div>
 
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
