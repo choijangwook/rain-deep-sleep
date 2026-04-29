@@ -12,23 +12,24 @@ layout: default
     </a>
   {% endif %}
 
-  <!-- 🔥 audio 단 하나만 -->
+  <!-- 🔥 오디오 -->
   <audio id="main-audio" autoplay>
     <source src="/assets/audio/rain.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- 🔥 카운트다운 -->
-  <div id="timer-display" class="timer-display">No timer</div>
+  <!-- 🔥 타이머 (절대 a 태그 안에 넣지 말 것) -->
+  <div class="timer-display" id="timer-display">No timer</div>
 
   <div class="timer-container">
-    <button data-time="30">30m</button>
-    <button data-time="60">1h</button>
-    <button data-time="120">2h</button>
-    <button data-time="240">4h</button>
-    <button data-time="480">8h</button>
-    <button data-time="0">OFF</button>
+    <button type="button" data-time="30">30m</button>
+    <button type="button" data-time="60">1h</button>
+    <button type="button" data-time="120">2h</button>
+    <button type="button" data-time="240">4h</button>
+    <button type="button" data-time="480">8h</button>
+    <button type="button" data-time="0">OFF</button>
   </div>
 
+  <!-- 🔥 본문 -->
   <div class="content">
     {{ content }}
   </div>
