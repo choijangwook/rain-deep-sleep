@@ -2,11 +2,36 @@
 layout: default
 ---
 
-<article>
+<article class="post">
 
-<h1>{{ page.title }}</h1>
-<p class="date">{{ page.date | date: "%Y-%m-%d" }}</p>
+  <h1>{{ page.title }}</h1>
 
-{{ content }}
+  {% if page.youtube_id %}
+    <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank" class="youtube-button">
+      ▶ Play on YouTube
+    </a>
+  {% endif %}
+
+  <!-- AUDIO -->
+  <audio controls autoplay loop style="width:100%; margin-top:20px;">
+    <source src="/assets/audio/rain.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- TIMER DISPLAY -->
+  <div id="timer-display" class="timer-display">No timer</div>
+
+  <!-- TIMER BUTTONS -->
+  <div class="timer-container">
+    <button onclick="setSleepTimer(30)">30m</button>
+    <button onclick="setSleepTimer(60)">1h</button>
+    <button onclick="setSleepTimer(120)">2h</button>
+    <button onclick="setSleepTimer(240)">4h</button>
+    <button onclick="setSleepTimer(480)">8h</button>
+    <button onclick="setSleepTimer(0)">OFF</button>
+  </div>
+
+  <div class="content">
+    {{ content }}
+  </div>
 
 </article>
