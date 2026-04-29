@@ -5,9 +5,7 @@ title: Home
 
 <div class="post-list">
 
-{% assign posts = site.posts | sort: "date" | reverse %}
-
-{% for post in posts limit:10 %}
+{% for post in site.posts %}
 
 <div class="post-item"
      onclick="openModal('{{ post.title }}','{{ post.youtube_id }}')">
@@ -18,15 +16,11 @@ title: Home
 
 </div>
 
-{% if forloop.index == 3 %}
-<div class="ad-slot">AdSense In-feed</div>
-{% endif %}
-
 {% endfor %}
 
 </div>
 
-<!-- 모달 -->
+<!-- 🔥 모달 -->
 <div id="modal" class="modal">
 
   <div class="modal-content">
@@ -36,7 +30,12 @@ title: Home
     <h2 id="modal-title"></h2>
 
     <div class="video-wrapper">
-      <iframe id="yt-frame" allow="autoplay; encrypted-media"></iframe>
+      <iframe id="yt-frame"
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
     </div>
 
     <div id="timer-display">No timer</div>
