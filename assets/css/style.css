@@ -7,6 +7,10 @@ html, body {
 
   overflow-x: hidden;
   width: 100%;
+}
+
+/* 🔥 핵심 안정화 */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -27,18 +31,16 @@ html, body {
   color: #fff;
   text-decoration: none;
   padding: 6px 10px;
-
-  /* 🔥 외곽선 */
   border: 1px solid #fff;
   border-radius: 6px;
 }
 
-/* ===== CONTAINER (PC 중앙 문제 해결 핵심) ===== */
+/* ===== CONTAINER (핵심 수정) ===== */
 .container {
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 /* ===== 썸네일 ===== */
@@ -48,22 +50,26 @@ html, body {
   border-radius: 10px;
 }
 
-/* 🔥 제목 간격 문제 해결 */
+/* 🔥 제목 바로 아래 붙이기 */
 .post-title {
-  margin: 10px 0;
+  margin: 10px 0 6px 0;
+}
+
+.thumb-link {
+  display: block;
+  margin-bottom: 10px;
 }
 
 /* ===== 타이머 ===== */
 .timer-display {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .timer-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .timer-container button {
@@ -90,14 +96,14 @@ html, body {
   color: #777;
 }
 
-/* ===== 모바일 밀림 해결 ===== */
+/* ===== 모바일 밀림 완전 제거 ===== */
 @media (max-width: 768px) {
-  .container {
-    padding: 15px;
-    max-width: 100%;
-  }
-
   body {
     overflow-x: hidden;
+  }
+
+  .container {
+    padding: 15px;
+    width: 100%;
   }
 }
