@@ -1,82 +1,4 @@
 /* =========================
-   GLOBAL
-========================= */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #0d0d0d;
-  color: #e5e5e5;
-  line-height: 1.6;
-}
-
-a {
-  color: #9ecbff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   LAYOUT
-========================= */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 15px;
-}
-
-h2 {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-/* =========================
-   YOUTUBE BUTTON
-========================= */
-.youtube-button {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 14px;
-  text-align: center;
-  background: #ff0000;
-  color: white;
-  font-weight: 500;
-  border-radius: 10px;
-  transition: 0.2s;
-}
-
-.youtube-button:hover {
-  background: #cc0000;
-}
-
-/* =========================
-   AUDIO PLAYER
-========================= */
-audio {
-  width: 100%;
-  margin-top: 15px;
-}
-
-/* =========================
-   TIMER DISPLAY
-========================= */
-.timer-display {
-  margin-top: 15px;
-  font-size: 16px;
-  color: #ccc;
-  text-align: center;
-}
-
-/* =========================
    TIMER BUTTONS
 ========================= */
 .timer-container {
@@ -86,7 +8,6 @@ audio {
   flex-wrap: wrap;
 }
 
-/* 버튼 기본 */
 .timer-container button {
   flex: 1;
   padding: 14px;
@@ -99,54 +20,14 @@ audio {
   transition: 0.2s;
 }
 
-/* hover */
 .timer-container button:hover {
   background: #444;
 }
 
-/* =========================
-   POST CONTENT
-========================= */
-.post {
-  margin-top: 20px;
-}
-
-.content {
-  margin-top: 20px;
-  font-size: 15px;
-  color: #ddd;
-}
-
-/* =========================
-   MOBILE OPTIMIZATION
-========================= */
-@media (max-width: 768px) {
-
-  body {
-    font-size: 15px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  .container {
-    padding: 15px;
-  }
-
-  /* 버튼 전체폭 */
-  .timer-container {
-    flex-direction: column;
-  }
-
-  .timer-container button {
-    width: 100%;
-    font-size: 16px;
-    padding: 18px;
-  }
-
-  .youtube-button {
-    padding: 16px;
-    font-size: 16px;
-  }
+/* 🔥 선택된 버튼 */
+.timer-container button.active {
+  background: #4a90e2;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(74,144,226,0.5);
 }
