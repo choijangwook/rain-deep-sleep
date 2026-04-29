@@ -33,9 +33,7 @@ function setSleepTimer(minutes) {
 
   if (!audio) return;
 
-  // 🔥 완전 초기화 (핵심)
   clearAllTimers();
-
   setActiveButton(minutes);
 
   if (minutes === 0) {
@@ -59,8 +57,11 @@ function setSleepTimer(minutes) {
   }, 1000);
 
   sleepTimer = setTimeout(() => {
-    audio.pause();
-    audio.currentTime = 0;
+    if (audio) {
+      audio.volume = 0; // 🔥 확실한 무음 처리
+      audio.pause();
+      audio.currentTime = 0;
+    }
 
     display.innerText = "😴 Sleep well";
 
@@ -69,14 +70,3 @@ function setSleepTimer(minutes) {
 
   }, minutes * 60 * 1000);
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const audio = getAudio();
-  if (!audio) return;
-
-  audio.addEventListener("play", () => {
-    if (!sleepTimer) {
-      setSleepTimer(60); // 기본 1시간
-    }
-  });
-});
