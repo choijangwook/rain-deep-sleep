@@ -5,6 +5,10 @@ let defaultTimerMinutes = localStorage.getItem("sleepTimer")
   ? parseInt(localStorage.getItem("sleepTimer"))
   : 60;
 
+function getAudio() {
+  return document.getElementById("main-audio");
+}
+
 function setActiveButton(minutes) {
   const buttons = document.querySelectorAll(".timer-container button");
 
@@ -18,8 +22,13 @@ function setActiveButton(minutes) {
 }
 
 function setSleepTimer(minutes) {
-  const audio = document.querySelector("audio");
+  const audio = getAudio();
   const display = document.getElementById("timer-display");
+
+  if (!audio) {
+    alert("Audio not found");
+    return;
+  }
 
   if (sleepTimer) clearTimeout(sleepTimer);
   if (countdownInterval) clearInterval(countdownInterval);
@@ -52,10 +61,8 @@ function setSleepTimer(minutes) {
   }, 1000);
 
   sleepTimer = setTimeout(() => {
-    if (audio) {
-      audio.pause();
-      audio.currentTime = 0;
-    }
+    audio.pause();
+    audio.currentTime = 0;
 
     if (display) display.innerText = "😴 Sleep well";
 
@@ -65,7 +72,7 @@ function setSleepTimer(minutes) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const audio = document.querySelector("audio");
+  const audio = getAudio();
 
   if (!audio) return;
 
@@ -78,9 +85,4 @@ document.addEventListener("DOMContentLoaded", () => {
       setSleepTimer(defaultTimerMinutes);
     }
   });
-});
-
-window.addEventListener("beforeunload", () => {
-  if (sleepTimer) clearTimeout(sleepTimer);
-  if (countdownInterval) clearInterval(countdownInterval);
 });
