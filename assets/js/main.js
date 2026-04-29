@@ -1,6 +1,5 @@
 let sleepTimer = null;
 let countdownInterval = null;
-let lastTriggerTime = 0; // 🔥 중복 실행 방지
 
 function getAudio() {
   return document.getElementById("main-audio");
@@ -28,7 +27,8 @@ function setSleepTimer(minutes) {
 
   if (!audio || !display) return;
 
-  audio.play().catch(() => {});
+  // 🔥 사용자 제스처 안에서 실행 (중요)
+  audio.play().catch(()=>{});
 
   clearAllTimers();
   setActiveButton(minutes);
@@ -66,27 +66,22 @@ function setSleepTimer(minutes) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const buttons = document.querySelectorAll(".timer-container button");
+  const container = document.querySelector(".timer-container");
 
-  buttons.forEach(btn => {
+  if (!container) return;
 
-    const handler = (e) => {
-      const now = Date.now();
+  // 🔥 핵심: 부모에서 처리 (Brave 안정)
+  container.addEventListener("click", (e) => {
 
-      // 🔥 중복 실행 방지 (200ms)
-      if (now - lastTriggerTime < 200) return;
-      lastTriggerTime = now;
+    const btn = e.target.closest("button");
+    if (!btn) return;
 
-      e.preventDefault();
+    e.preventDefault();
+    e.stopPropagation();
 
-      const time = parseInt(btn.dataset.time);
-      setSleepTimer(time);
-    };
+    const time = parseInt(btn.dataset.time);
+    setSleepTimer(time);
 
-    // 🔥 모든 환경 커버
-    btn.addEventListener("click", handler);
-    btn.addEventListener("touchstart", handler, { passive: false });
-    btn.addEventListener("pointerdown", handler);
   });
 
 });
