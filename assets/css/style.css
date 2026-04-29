@@ -1,21 +1,69 @@
-/* TIMER BUTTONS */
-.timer-container {
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #eee;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== NAV ===== */
+.nav {
+  background: #111;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: center; /* 🔥 중앙 정렬 */
+  gap: 20px;
+  padding: 15px;
+}
+
+.nav-inner a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.nav-inner a:hover {
+  color: #fff;
+}
+
+/* ===== AUDIO ===== */
+audio {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* ===== TIMER DISPLAY ===== */
+.timer-display {
+  text-align: center;
   margin-top: 15px;
+  font-size: 16px;
+}
+
+/* ===== TIMER BUTTON ===== */
+.timer-container {
   display: flex;
   gap: 10px;
+  margin-top: 15px;
   flex-wrap: wrap;
 }
 
 .timer-container button {
   flex: 1;
   padding: 14px;
-  border-radius: 12px;
-  border: 2px solid #333;
   background: #1a1a1a;
-  color: #bbb;
+  color: #ccc;
+  border: 1px solid #333;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 14px;
-  transition: all 0.15s ease;
+  transition: 0.15s;
 }
 
 /* hover */
@@ -23,25 +71,29 @@
   background: #2a2a2a;
 }
 
-/* 클릭 */
+/* 🔥 모바일 터치 반응 */
 .timer-container button:active {
   transform: scale(0.95);
+  background: #333;
 }
 
-/* 🔥 선택 상태 (완전히 다르게) */
+/* 🔥 선택 상태 (모바일 포함 강제 적용) */
 .timer-container button.active {
-  background: #00c853; /* 강한 초록 */
-  color: #000;
-  font-weight: 800;
+  background: #00c853 !important;
+  color: #000 !important;
+  font-weight: bold;
   border: 2px solid #00e676;
-  box-shadow: 0 0 15px rgba(0,200,83,0.8);
-  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(0,200,83,0.7);
 }
 
-/* TIMER DISPLAY */
-.timer-display {
-  margin-top: 15px;
-  font-size: 16px;
-  color: #eee;
-  text-align: center;
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .timer-container {
+    flex-direction: column;
+  }
+
+  .timer-container button {
+    width: 100%;
+    font-size: 16px;
+  }
 }
