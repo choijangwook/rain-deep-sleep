@@ -4,33 +4,33 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
 
-  <!-- 모바일 확대/레이아웃 깨짐 방지 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- 모바일 안정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSS (캐시 방지) -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css?v=70">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
 
-<!-- 네비게이션 -->
+<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="{{ site.baseurl }}/">Home</a>
-    <a href="{{ site.baseurl }}/blog.html">Blog</a>
-    <a href="{{ site.baseurl }}/about.html">About</a>
-    <a href="{{ site.baseurl }}/faq.html">FAQ</a>
-    <a href="{{ site.baseurl }}/privacy.html">Privacy</a>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+    <a href="{{ '/about.html' | relative_url }}">About</a>
+    <a href="{{ '/faq.html' | relative_url }}">FAQ</a>
+    <a href="{{ '/privacy.html' | relative_url }}">Privacy</a>
   </div>
 </nav>
 
-<!-- 메인 콘텐츠 -->
-<main class="main container">
+<!-- CONTENT -->
+<main class="container">
   {{ content }}
 </main>
 
-<!-- 🔥 JS (이거 하나만 사용) -->
-<script src="{{ site.baseurl }}/assets/js/main.js?v=70"></script>
+<!-- JS -->
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
 </body>
 </html>
