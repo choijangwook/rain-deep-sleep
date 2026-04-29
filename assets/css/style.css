@@ -2,13 +2,13 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* 🔥 핵심 */
+  overflow-x: hidden;
   background: #0d0d0d;
   color: #eee;
   font-family: Arial, sans-serif;
 }
 
-/* 링크 색 고정 */
+/* 🔥 링크 색 */
 a, a:visited {
   color: #fff;
   text-decoration: none;
@@ -17,10 +17,16 @@ a, a:visited {
 /* ===== CONTAINER ===== */
 .container {
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
-  width: 100%;
   box-sizing: border-box;
+}
+
+/* 🔥 핵심: 콘텐츠도 중앙 */
+.post {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* ===== NAV ===== */
@@ -37,15 +43,21 @@ audio {
   margin-top: 20px;
 }
 
-/* ===== TIMER ===== */
+/* ===== TIMER DISPLAY ===== */
+.timer-display {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* ===== TIMER BUTTON ===== */
 .timer-container {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 15px;
   flex-wrap: wrap;
 }
 
-/* 버튼 */
 .timer-container button {
   flex: 1;
   padding: 14px;
@@ -54,7 +66,7 @@ audio {
   border: 1px solid #333;
   border-radius: 10px;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent; /* 🔥 모바일 터치 잔상 제거 */
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* 🔥 선택 상태 */
@@ -76,6 +88,16 @@ audio {
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .container, .post {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   .timer-container {
     flex-direction: column;
   }
