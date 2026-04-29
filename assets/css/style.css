@@ -4,12 +4,12 @@ body {
   font-family: Arial, sans-serif;
   background: #0d0d0d;
   color: #eee;
-  overflow-x: hidden; /* 🔥 좌우 스크롤 제거 */
+  overflow-x: hidden;
 }
 
-/* 링크 기본 색 강제 */
+/* 🔥 링크 색 고정 */
 a, a:visited {
-  color: #fff; /* 🔥 보라색 방지 */
+  color: #fff;
   text-decoration: none;
 }
 
@@ -18,13 +18,10 @@ a, a:visited {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  width: 100%; /* 🔥 PC 왼쪽 쏠림 해결 */
 }
 
 /* ===== NAV ===== */
-.nav {
-  background: #111;
-}
-
 .nav-inner {
   display: flex;
   justify-content: center;
@@ -38,21 +35,26 @@ audio {
   margin-top: 20px;
 }
 
-/* ===== TIMER DISPLAY ===== */
-.timer-display {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 16px;
-}
-
-/* ===== TIMER BUTTON ===== */
+/* ===== TIMER ===== */
 .timer-container {
   display: flex;
-  gap: 10px;
-  margin-top: 15px;
   flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: center;
 }
 
+/* 🔥 숫자 표시 (버튼 크기 동일) */
+.timer-display {
+  flex: 1;
+  padding: 14px;
+  text-align: center;
+  background: #111;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+/* ===== BUTTON ===== */
 .timer-container button {
   flex: 1;
   padding: 14px;
@@ -61,33 +63,17 @@ audio {
   border: 1px solid #333;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.15s;
 }
 
-/* hover */
-.timer-container button:hover {
-  background: #2a2a2a;
-}
-
-/* 모바일 클릭 효과 */
-.timer-container button:active {
-  transform: scale(0.95);
-  background: #333;
-}
-
-/* 🔥 선택 상태 (강제 우선순위) */
+/* 🔥 선택 상태 */
 .timer-container button.active {
   background: #00c853 !important;
   color: #000 !important;
-  font-weight: bold;
   border: 2px solid #00e676 !important;
-  box-shadow: 0 0 12px rgba(0,200,83,0.8);
 }
 
-/* ===== YOUTUBE BUTTON ===== */
-.youtube-button,
-.youtube-button:visited {
-  color: #fff; /* 🔥 보라색 방지 */
+/* ===== YOUTUBE ===== */
+.youtube-button {
   background: #ff0000;
   display: block;
   padding: 14px;
@@ -98,12 +84,17 @@ audio {
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
   .timer-container {
     flex-direction: column;
   }
 
-  .timer-container button {
+  .timer-container button,
+  .timer-display {
     width: 100%;
-    font-size: 16px;
   }
 }
