@@ -6,20 +6,14 @@ function getAudio() {
 }
 
 function clearAllTimers() {
-  if (sleepTimer) {
-    clearTimeout(sleepTimer);
-    sleepTimer = null;
-  }
-  if (countdownInterval) {
-    clearInterval(countdownInterval);
-    countdownInterval = null;
-  }
+  if (sleepTimer) clearTimeout(sleepTimer);
+  if (countdownInterval) clearInterval(countdownInterval);
+  sleepTimer = null;
+  countdownInterval = null;
 }
 
 function setActiveButton(minutes) {
-  const buttons = document.querySelectorAll(".timer-container button");
-
-  buttons.forEach(btn => {
+  document.querySelectorAll(".timer-container button").forEach(btn => {
     btn.classList.remove("active");
     if (btn.dataset.time == minutes) {
       btn.classList.add("active");
@@ -31,7 +25,7 @@ function setSleepTimer(minutes) {
   const audio = getAudio();
   const display = document.getElementById("timer-display");
 
-  if (!audio) return;
+  if (!audio || !display) return;
 
   clearAllTimers();
   setActiveButton(minutes);
@@ -43,6 +37,8 @@ function setSleepTimer(minutes) {
 
   let remaining = minutes * 60;
 
+  display.innerText = `⏳ ${minutes}:00`;
+
   countdownInterval = setInterval(() => {
     let m = Math.floor(remaining / 60);
     let s = remaining % 60;
@@ -51,22 +47,17 @@ function setSleepTimer(minutes) {
 
     remaining--;
 
-    if (remaining < 0) {
-      clearInterval(countdownInterval);
-    }
+    if (remaining < 0) clearInterval(countdownInterval);
   }, 1000);
 
   sleepTimer = setTimeout(() => {
-    if (audio) {
-      audio.volume = 0; // 🔥 확실한 무음 처리
-      audio.pause();
-      audio.currentTime = 0;
-    }
+    audio.pause();
+    audio.currentTime = 0;
+    audio.volume = 0;
 
     display.innerText = "😴 Sleep well";
 
     clearAllTimers();
     setActiveButton(null);
-
   }, minutes * 60 * 1000);
 }
