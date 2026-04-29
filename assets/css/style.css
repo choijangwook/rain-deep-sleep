@@ -4,13 +4,11 @@ html, body {
   background: #0d0d0d;
   color: #eee;
   font-family: Arial, sans-serif;
-
   overflow-x: hidden;
-  width: 100%;
 }
 
-/* 🔥 핵심 안정화 */
-*, *::before, *::after {
+/* 안정화 */
+* {
   box-sizing: border-box;
 }
 
@@ -23,8 +21,8 @@ html, body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding: 15px;
   flex-wrap: wrap;
+  padding: 15px;
 }
 
 .nav-inner a {
@@ -35,7 +33,7 @@ html, body {
   border-radius: 6px;
 }
 
-/* ===== CONTAINER (핵심 수정) ===== */
+/* ===== CONTAINER ===== */
 .container {
   width: 100%;
   max-width: 900px;
@@ -50,14 +48,9 @@ html, body {
   border-radius: 10px;
 }
 
-/* 🔥 제목 바로 아래 붙이기 */
+/* 제목 간격 */
 .post-title {
   margin: 10px 0 6px 0;
-}
-
-.thumb-link {
-  display: block;
-  margin-bottom: 10px;
 }
 
 /* ===== 타이머 ===== */
@@ -98,12 +91,7 @@ html, body {
 
 /* ===== 모바일 밀림 완전 제거 ===== */
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .container {
     padding: 15px;
-    width: 100%;
   }
 }
