@@ -1,13 +1,14 @@
 /* ===== GLOBAL ===== */
-body {
+html, body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  overflow-x: hidden; /* 🔥 핵심 */
   background: #0d0d0d;
   color: #eee;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
-/* 🔥 링크 색 고정 */
+/* 링크 색 고정 */
 a, a:visited {
   color: #fff;
   text-decoration: none;
@@ -18,7 +19,8 @@ a, a:visited {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-  width: 100%; /* 🔥 PC 왼쪽 쏠림 해결 */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* ===== NAV ===== */
@@ -38,23 +40,12 @@ audio {
 /* ===== TIMER ===== */
 .timer-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* 🔥 숫자 표시 (버튼 크기 동일) */
-.timer-display {
-  flex: 1;
-  padding: 14px;
-  text-align: center;
-  background: #111;
-  border-radius: 10px;
-  border: 1px solid #333;
-}
-
-/* ===== BUTTON ===== */
+/* 버튼 */
 .timer-container button {
   flex: 1;
   padding: 14px;
@@ -63,6 +54,7 @@ audio {
   border: 1px solid #333;
   border-radius: 10px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* 🔥 모바일 터치 잔상 제거 */
 }
 
 /* 🔥 선택 상태 */
@@ -84,17 +76,12 @@ audio {
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
   .timer-container {
     flex-direction: column;
   }
 
-  .timer-container button,
-  .timer-display {
+  .timer-container button {
     width: 100%;
+    font-size: 16px;
   }
 }
