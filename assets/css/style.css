@@ -1,28 +1,109 @@
-/* ===== YouTube Thumbnail ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+  color: #eee;
+  font-family: Arial, sans-serif;
+
+  overflow-x: hidden;
+
+  /* 🔥 모바일 확대 방지 */
+  touch-action: manipulation;
+}
+
+/* ===== NAV (중앙 복구) ===== */
+.nav {
+  border-bottom: 1px solid #333;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-inner a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+
+/* ===== 컨테이너 ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ===== 썸네일 ===== */
 .yt-thumb {
   width: 100%;
-  border-radius: 10px;
   display: block;
+  border-radius: 10px;
 }
 
-/* ===== YouTube Button ===== */
-.youtube-button {
-  display: block;
-  margin-top: 10px;
-  padding: 14px;
-  background: #ff0000;
-  color: #fff;
+/* ===== 타이머 ===== */
+.timer-display {
   text-align: center;
-  border-radius: 10px;
-  text-decoration: none;
+  margin-top: 15px;
+  font-size: 18px;
 }
 
-/* ===== AdSense Slot ===== */
+.timer-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.timer-container button {
+  flex: 1;
+  padding: 14px;
+  background: #1a1a1a;
+  color: #ccc;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.timer-container button.active {
+  background: #00c853;
+  color: #000;
+}
+
+/* ===== START 버튼 ===== */
+.start-button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 15px;
+  background: #00c853;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* ===== AD ===== */
 .ad-slot {
   margin: 25px 0;
   padding: 20px;
   background: #111;
   border: 1px dashed #333;
   text-align: center;
-  color: #666;
+  color: #777;
+}
+
+/* ===== 모바일 ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .timer-container {
+    flex-direction: column;
+  }
 }
