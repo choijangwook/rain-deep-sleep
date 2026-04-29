@@ -124,3 +124,12 @@ html, body {
 .timer-container button {
   touch-action: manipulation;
 }
+.timer-container {
+  position: relative;
+  z-index: 9999; /* 🔥 최상단으로 올림 */
+}
+
+.timer-container button {
+  position: relative;
+  z-index: 10000;
+}
