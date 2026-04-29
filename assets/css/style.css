@@ -1,1 +1,24 @@
+.ad-slot {
+  margin: 25px auto;
+  padding: 25px;
+  border: 1px dashed #444;
+  text-align: center;
+  max-width: 900px;
+  background: #111;
+  color: #777;
+}
 
+/* 썸네일 카드 강화 */
+.post-item {
+  transition: transform 0.2s ease;
+}
+
+.post-item:hover {
+  transform: scale(1.01);
+}
+
+/* 타이틀 강조 */
+.post-item h2 {
+  font-size: 16px;
+  color: #fff;
+}
