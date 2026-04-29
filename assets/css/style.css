@@ -116,3 +116,11 @@ html, body {
   }
 
 }
+.timer-container {
+  position: relative;
+  z-index: 10; /* 🔥 클릭 막힘 방지 */
+}
+
+.timer-container button {
+  touch-action: manipulation;
+}
