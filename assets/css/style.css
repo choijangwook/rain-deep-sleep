@@ -13,8 +13,26 @@ a, a:visited {
   text-decoration: none;
 }
 
-/* 컨테이너 */
-.container, .post, .main {
+/* ===== NAV ===== */
+.nav {
+  border-bottom: 1px solid #333; /* 🔥 외곽선 */
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+.nav-inner a {
+  padding: 6px 10px;
+  border: 1px solid #333; /* 🔥 버튼 느낌 */
+  border-radius: 6px;
+}
+
+/* ===== CONTAINER ===== */
+.container, .main {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
@@ -22,38 +40,29 @@ a, a:visited {
   box-sizing: border-box;
 }
 
-/* NAV */
-.nav-inner {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
-}
-
-/* 🔥 썸네일 + 제목 */
+/* ===== 썸네일 ===== */
 .post-item {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .post-item img {
-  width: 100%;
+  width: 100%;  /* 🔥 Home 썸네일 복구 */
+  height: auto;
   display: block;
 }
 
 .post-item h2 {
-  margin-top: 8px; /* 🔥 썸네일 바로 아래 */
+  margin: 6px 0 0 0; /* 🔥 바로 아래 */
   font-size: 16px;
-  line-height: 1.4;
 }
 
-/* TIMER */
+/* ===== TIMER ===== */
 .timer-display {
   text-align: center;
   margin-top: 15px;
   font-size: 18px;
 }
 
-/* 버튼 */
 .timer-container {
   display: flex;
   gap: 10px;
@@ -70,7 +79,7 @@ a, a:visited {
   border-radius: 10px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation; /* 🔥 모바일 핵심 */
+  touch-action: manipulation;
 }
 
 .timer-container button.active {
@@ -79,7 +88,7 @@ a, a:visited {
   border: 2px solid #00e676 !important;
 }
 
-/* 유튜브 버튼 */
+/* ===== YOUTUBE ===== */
 .youtube-button {
   background: #ff0000;
   display: block;
@@ -89,16 +98,12 @@ a, a:visited {
   margin-top: 10px;
 }
 
-/* 🔥 광고 영역 */
-.ad-box {
-  margin: 30px 0;
-  padding: 20px;
-  background: #111;
-  text-align: center;
-  border: 1px dashed #333;
+/* ===== BLOG overflow 해결 ===== */
+.main, .container {
+  overflow-x: hidden;
 }
 
-/* 모바일 */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
   .timer-container {
