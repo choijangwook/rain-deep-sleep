@@ -12,13 +12,11 @@ layout: default
     </a>
   {% endif %}
 
-  <!-- 🔥 오디오 -->
   <audio id="main-audio" autoplay>
     <source src="/assets/audio/rain.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- 🔥 타이머 (절대 a 태그 안에 넣지 말 것) -->
-  <div class="timer-display" id="timer-display">No timer</div>
+  <div id="timer-display" class="timer-display">No timer</div>
 
   <div class="timer-container">
     <button type="button" data-time="30">30m</button>
@@ -29,9 +27,61 @@ layout: default
     <button type="button" data-time="0">OFF</button>
   </div>
 
-  <!-- 🔥 본문 -->
   <div class="content">
     {{ content }}
   </div>
 
 </article>
+
+<!-- 🔥 JS를 페이지에 직접 삽입 (핵심) -->
+<script>
+let sleepTimer = null;
+let countdownInterval = null;
+
+function setSleepTimer(minutes) {
+  const audio = document.getElementById("main-audio");
+  const display = document.getElementById("timer-display");
+
+  if (!audio || !display) return;
+
+  audio.play().catch(()=>{});
+
+  if (sleepTimer) clearTimeout(sleepTimer);
+  if (countdownInterval) clearInterval(countdownInterval);
+
+  document.querySelectorAll(".timer-container button").forEach(btn=>{
+    btn.classList.remove("active");
+    if (btn.dataset.time == minutes) btn.classList.add("active");
+  });
+
+  if (minutes === 0) {
+    display.innerText = "⛔ OFF";
+    return;
+  }
+
+  let remaining = minutes * 60;
+
+  countdownInterval = setInterval(()=>{
+    let m = Math.floor(remaining / 60);
+    let s = remaining % 60;
+    display.innerText = `⏳ ${m}:${s.toString().padStart(2,"0")}`;
+    remaining--;
+    if (remaining < 0) clearInterval(countdownInterval);
+  },1000);
+
+  sleepTimer = setTimeout(()=>{
+    audio.pause();
+    audio.currentTime = 0;
+    audio.src = "";
+    display.innerText = "😴 Sleep well";
+  }, minutes * 60 * 1000);
+}
+
+/* 🔥 직접 이벤트 바인딩 */
+document.querySelectorAll(".timer-container button").forEach(btn=>{
+  btn.onclick = function(e){
+    e.preventDefault();
+    setSleepTimer(parseInt(this.dataset.time));
+  };
+});
+</script>
