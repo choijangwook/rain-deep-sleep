@@ -5,10 +5,11 @@ title: About
 
 # About
 
-🌧️ Fall asleep easily with the sound of rain.<br>
-Natural rain sounds take away your stress and<br>
-help you sleep quickly. We made this video<br>
-to help you rest and sleep well.<br>
+🌧️ Rain Sounds for Deep, Cozy Sleep!
+This is the sound of rain to help you sleep deeply and feel comfortable.
+On a quiet night, the gentle sound of rain helps you relax and fall asleep faster!
+There is a timer that stops the rain sounds whenever you want, so you can enjoy a deep, peaceful sleep.
+This video was made to help you sleep, focus, meditate, and rest. 
 
 🌙 Try listening when: <br>
 You want to fall asleep fast.<br>
