@@ -5,11 +5,15 @@ title: About
 
 # About
 
-🌧️ Rain Sounds for Deep, Cozy Sleep!
-This is the sound of rain to help you sleep deeply and feel comfortable.
-On a quiet night, the gentle sound of rain helps you relax and fall asleep faster!
-There is a timer that stops the rain sounds whenever you want, so you can enjoy a deep, peaceful sleep.
-This video was made to help you sleep, focus, meditate, and rest. 
+🌧️ Rain Sounds for Deep, Cozy Sleep!<br>
+This is the sound of rain to help you sleep<br> 
+deeply and feel comfortable.<br>
+On a quiet night, the gentle sound of rain helps<br>
+you relax and fall asleep faster!<br>
+There is a timer that stops the rain sounds<br> 
+whenever you want, so you can enjoy a deep,<br>
+peaceful sleep. This video was made to help you<br>
+sleep, focus, meditate, and rest. <br>
 
 🌙 Try listening when: <br>
 You want to fall asleep fast.<br>
