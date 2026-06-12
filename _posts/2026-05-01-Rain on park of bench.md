@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rain on park of bench"
-categories: [cabin]
+categories: [Beach]
 youtube_id: d_AeMqstHO8
 
 ---
