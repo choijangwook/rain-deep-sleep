@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Fireplace and Rain"
-categories: [cabin]
-youtube_id: 
+title: "Rain on the Valley"
+categories: [Nature]
+youtube_id: 5eN6QhCuaYo
 
 ---
 
