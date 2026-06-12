@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Fireplace and Rain"
-categories: [cabin]
-youtube_id: 
+title: "Rain falling on a beach house"
+categories: [Beach]
+youtube_id: fjR_kIU92lM
 
 ---
 
