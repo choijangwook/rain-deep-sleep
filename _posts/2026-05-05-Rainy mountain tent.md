@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Fireplace and Rain"
+title: "Rainy mountain tent"
 categories: [cabin]
-youtube_id: 
+youtube_id: dmSb7xTyMyk
 
 ---
 
